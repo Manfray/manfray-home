@@ -1,24 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <style>
-    .test {
-      box-sizing: content-box;
-      width: 400px;
-      height: 2px;
-      /* background-color: red; */
-      border-top: 5px solid transparent;
-      border-right: 5px solid red;
-      border-bottom: 5px solid transparent;
-      border-left: 5px solid red;
-    }
-  </style>
-</head>
-<body>
-  <div class="test"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=1920, initial-scale=1.0" />
+    <title>Home design</title>
+    <style>
+      div {
+        /* 用content作为宽高标准 */
+        box-sizing: content-box;
+      }
+      /* wall墙体，默认20厚度 */
+      .w {
+        width: 0px;
+        height: 0px;
+        border: 10px solid #ccc;
+        margin: -10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      /* line线 */
+      .l {
+        width: 1px;
+        height: 1px;
+        background-color: #aaa;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      /* 门 */
+      .d {
+        width: 7px;
+        height: 7px;
+        background-color: #aaa;
+        position: absolute;
+      }
+      .home {
+        width: 930px;
+        height: 1060px;
+      }
+      .kitchen {
+        width: 240px;
+        height: 270px;
+        position: relative;
+      }
+      .freezer {
+        width: 92px;
+        height: 64px;
+        border: 1px solid #aaa;
+        position: absolute;
+        left: 13px;
+        bottom: 13px;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+    "
+  >
+    <div style="margin: -10px">
+      <!-- 房屋设计 -->
+      <!-- 整个房子 -->
+      <div class="home">
+        <!-- 厨房 -->
+        <div class="kitchen">
+          <!-- 墙壁 -->
+          <div class="w" style="width: 240px"></div>
+          <div class="w" style="height: 250px; left: 100%"></div>
+          <div class="w" style="width: 80px; left: 160px; top: 250px"></div>
+          <div class="w" style="height: 20px; left: 160px; top: 250px"></div>
+          <div class="w" style="width: 160px; top: 100%"></div>
+          <div class="w" style="height: 50px; left: 0"></div>
+          <div class="w" style="height: 40px; top: 230px"></div>
+          <!-- 线 -->
+          <div class="l" style="width: 170px; left: 10px; top: 60px"></div>
+          <div class="l" style="height: 130px; left: 180px; top: 60px"></div>
+          <div class="l" style="width: 70px; left: 110px; top: 190px"></div>
+          <div class="l" style="height: 70px; left: 110px; top: 190px"></div>
+          <!-- 冰箱 -->
+          <div class="freezer"></div>
+          <!-- 门 -->
+          <div class="doors" style="width: 16px;height: 160px;position:absolute;top: 60px;left: -8px;">
+            <div class="d" style="height: 83px;"></div>
+            <div class="d" style="height: 83px;left: 8px;top: 77px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
