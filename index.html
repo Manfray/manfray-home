@@ -11,10 +11,20 @@
         box-sizing: content-box;
       }
       /* wall墙体，默认20厚度 */
+      .s-s::after {
+        /* 使用attr函数 */
+        content: attr(datasize);
+        position: absolute;
+        top: calc(50% - 4px);
+        left: 45%;
+        scale: 0.5;
+        z-index: 2;
+      }
       .w {
-        width: 0px;
-        height: 0px;
-        border: 10px solid #ccc;
+        width: 1px;
+        height: 1px;
+        background-color: #aaa;
+        border: 9px solid #ccc;
         margin: -10px;
         position: absolute;
         top: 0;
@@ -70,27 +80,36 @@
         <!-- 厨房 -->
         <div class="kitchen">
           <!-- 墙壁 -->
-          <div class="w" style="width: 240px"></div>
-          <div class="w" style="height: 250px; left: 100%"></div>
-          <div class="w" style="width: 80px; left: 160px; top: 250px"></div>
-          <div class="w" style="height: 20px; left: 160px; top: 250px"></div>
-          <div class="w" style="width: 160px; top: 100%"></div>
-          <div class="w" style="height: 50px; left: 0"></div>
-          <div class="w" style="height: 40px; top: 230px"></div>
+          <div class="w s-s" style="width: 240px"></div>
+          <div class="w s-s" style="height: 250px; left: 100%"></div>
+          <div class="w s-s" style="width: 80px; left: 160px; top: 250px"></div>
+          <div class="w s-s" style="height: 20px; left: 160px; top: 250px"></div>
+          <div class="w s-s" style="width: 160px; top: 100%"></div>
+          <div class="w s-s" style="height: 50px; left: 0"></div>
+          <div class="w s-s" style="height: 40px; top: 230px"></div>
           <!-- 线 -->
-          <div class="l" style="width: 170px; left: 10px; top: 60px"></div>
-          <div class="l" style="height: 130px; left: 180px; top: 60px"></div>
-          <div class="l" style="width: 70px; left: 110px; top: 190px"></div>
-          <div class="l" style="height: 70px; left: 110px; top: 190px"></div>
+          <div class="l s-s" style="width: 170px; left: 10px; top: 60px"></div>
+          <div class="l s-s" style="height: 130px; left: 180px; top: 60px"></div>
+          <div class="l s-s" style="width: 70px; left: 110px; top: 190px"></div>
+          <div class="l s-s" style="height: 70px; left: 110px; top: 190px"></div>
           <!-- 冰箱 -->
-          <div class="freezer"></div>
+          <div class="freezer s-s"></div>
           <!-- 门 -->
           <div class="doors" style="width: 16px;height: 160px;position:absolute;top: 60px;left: -8px;">
-            <div class="d" style="height: 83px;"></div>
-            <div class="d" style="height: 83px;left: 8px;top: 77px"></div>
+            <div class="d s-s" style="height: 83px;"></div>
+            <div class="d s-s" style="height: 83px;left: 8px;top: 77px"></div>
           </div>
         </div>
       </div>
     </div>
+    <script>
+      // 所有元素自动显示宽高
+      document.getElementsByClassName('s-s')
+      console.log(document.getElementsByClassName('s-s'))
+      Array.prototype.forEach.call(document.getElementsByClassName('s-s'), element => {
+        const widthHeightArray = [element.clientWidth, element.clientHeight]
+        element.setAttribute('datasize', widthHeightArray.filter(num => num > 1).join('*'))
+      })
+    </script>
   </body>
 </html>
