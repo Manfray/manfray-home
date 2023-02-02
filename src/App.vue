@@ -6,18 +6,43 @@
         <span>单位：cm</span>
         <br />
         <span>注：默认墙体厚度20</span>
+        <br />
+        <span>显示用电器件</span>
+        <el-switch
+          v-model="showDianqiList"
+          active-color="red">
+        </el-switch>
+        <span>显示用水器件</span>
+        <el-switch
+          v-model="showWaterList"
+          active-color="blue">
+        </el-switch>
+        <div>备注：1、厨房的洗碗机放哪里？2、大厅有立式空调，最左边的壁柜怎么放？</div>
       </div>
       <!-- 整个房子 -->
       <div class="home">
         <div class="w s-s" style="height: 840px;top:80px;"></div>
+        <!-- 厨房素材 -->
+        <el-popover
+          placement="bottom"
+          title="装修参考"
+          width="300"
+          trigger="click">
+          <el-carousel height="300px" :autoplay="false" arrow="always">
+            <el-carousel-item v-for="item in 3" :key="item" style="height:300px">
+              <img :src="`./chufang/${item}.jpg`" alt="" style="height: 100%">
+            </el-carousel-item>
+          </el-carousel>
+          <i slot="reference" class="magic el-icon-magic-stick" style="top: 170px;left: 153px;"></i>
+        </el-popover>
         <!-- 墙柜素材 -->
         <el-popover
           placement="bottom"
           title="装修参考"
           width="300"
           trigger="click">
-          <el-carousel height="300px" :autoplay="false">
-            <el-carousel-item v-for="item in 2" :key="item" style="height:300px">
+          <el-carousel height="300px" :autoplay="false" arrow="always">
+            <el-carousel-item v-for="item in 3" :key="item" style="height:300px">
               <img :src="`./qianggui/${item}.jpg`" alt="" style="height: 100%">
             </el-carousel-item>
           </el-carousel>
@@ -29,7 +54,7 @@
           title="装修参考"
           width="300"
           trigger="click">
-          <el-carousel height="300px" :autoplay="false">
+          <el-carousel height="300px" :autoplay="false" arrow="always">
             <el-carousel-item v-for="item in 2" :key="item" style="height:300px">
               <img :src="`./yangtai/${item}.jpg`" alt="" style="height: 100%">
             </el-carousel-item>
@@ -42,7 +67,7 @@
           title="装修参考"
           width="300"
           trigger="click">
-          <el-carousel height="300px" :autoplay="false">
+          <el-carousel height="300px" :autoplay="false" arrow="always">
             <el-carousel-item v-for="item in 2" :key="item" style="height:300px">
               <img :src="`./xishoujian/${item}.jpg`" alt="" style="height: 100%">
             </el-carousel-item>
@@ -87,6 +112,22 @@
           <div class="l s-s" style="height: 70px; left: 110px; top: 190px"></div>
           <!-- 冰箱 -->
           <div class="freezer s-s"></div>
+          <!-- 排烟管道 -->
+          <div class="paiyanguandao s-s">
+            <div class="dianqi-name">排烟管道</div>
+          </div>
+          <!-- 油烟机 -->
+          <div class="youyanji s-s">
+            <div class="dianqi-name">油烟机</div>
+          </div>
+          <!-- 油烟机 -->
+          <div class="ranqizao s-s">
+            <div class="dianqi-name">油烟机</div>
+          </div>
+          <!-- 洗手池 -->
+          <div class="xishouchi s-s">
+            <div class="dianqi-name">洗手池</div>
+          </div>
           <!-- 门 -->
           <div
             class="doors"
@@ -94,6 +135,93 @@
           >
             <div class="d s-s" style="height: 75px;"></div>
             <div class="d s-s" style="height: 75px;left: 8px;top: 70px"></div>
+          </div>
+          <!-- 厨房电器 -->
+          <div class="dianqi-list" v-show="showDianqiList">
+            厨房用电器件：
+            <div>煤气灶</div>
+            <div>油烟机</div>
+            <div>洗碗机</div>
+            <div>净水器</div>
+            <div>热水器</div>
+            <div>冰箱</div>
+            <div>灯</div>
+            <div>额外插座</div>
+          </div>
+        </div>
+        <div class="zoulang">
+          <!-- 玄关 -->
+          <div class="xuanguan s-s"></div>
+          <!-- 走廊电器 -->
+          <div class="dianqi-list" v-show="showDianqiList">
+            走廊用电器件：
+            <div>开关</div>
+            <div>额外插座</div>
+            <div>灯</div>
+          </div>
+        </div>
+        <!-- 大厅 -->
+        <div class="dating">
+          <!--  -->
+          <div class="bigui s-s"></div>
+          <div class="dianqi-list" v-show="showDianqiList">
+            大厅用电器件：
+            <div>电视机</div>
+            <div>立式空调</div>
+            <div>开关</div>
+            <div>额外插座</div>
+            <div>射灯、吸顶灯</div>
+          </div>
+        </div>
+        <!-- 阳台 -->
+        <div class="yangtai">
+          <!--  -->
+          <div class="yanggaiguizi s-s"></div>
+          <div class="dianqi-list" v-show="showDianqiList">
+            阳台用电器件：
+            <div>洗衣机</div>
+            <div>烘干机</div>
+            <div>电动晾衣架？</div>
+            <div>开关</div>
+            <div>额外插座</div>
+            <div>灯</div>
+          </div>
+        </div>
+        <!-- 书房 -->
+        <div class="shufang">
+          <!--  -->
+          <div class="shujia s-s"></div>
+          <div class="dianqi-list" v-show="showDianqiList">
+            书房用电器件：
+            <div>电脑</div>
+            <div>射灯</div>
+            <div>电动晾衣架？</div>
+            <div>开关</div>
+            <div>额外插座</div>
+            <div>射灯、吸顶灯</div>
+          </div>
+        </div>
+        <!-- 主卧 -->
+        <div class="zhuwo">
+          <!--  -->
+          <div class="yigui s-s"></div>
+          <div class="dianqi-list" v-show="showDianqiList">
+            主卧用电器件：
+            <div>投影仪</div>
+            <div>开关</div>
+            <div>额外插座</div>
+            <div>吸顶灯、床头灯</div>
+          </div>
+        </div>
+        <!-- 次卧 -->
+        <div class="ciwo">
+          <!--  -->
+          <div class="yigui s-s"></div>
+          <div class="dianqi-list" v-show="showDianqiList">
+            次卧用电器件：
+            <div>开关</div>
+            <div>额外插座</div>
+            <div>吸顶灯、床头灯</div>
           </div>
         </div>
         <!-- 洗手间 -->
@@ -119,6 +247,12 @@
 export default {
   name: "App",
   components: {},
+  data() {
+    return {
+      showDianqiList: false,
+      showWaterList: false
+    }
+  },
   mounted() {
     Array.prototype.forEach.call(
       document.getElementsByClassName("s-s"),
@@ -173,6 +307,131 @@ export default {
     position: absolute;
     left: 13px;
     bottom: 13px;
+  }
+  .paiyanguandao { // 排烟管道
+    width: 45px;
+    height: 45px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+  .youyanji { // 油烟机
+    width: 90px;
+    height: 43px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 60px;
+    top: 12px;
+  }
+  .ranqizao {
+    width: 60px;
+    height: 38px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 75px;
+    top: 14px;
+  }
+  .xishouchi {
+    width: 40px;
+    height: 60px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 185px;
+    top: 80px;
+  }
+}
+// 走廊
+.zoulang {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  left: 10px;
+  top: 90px;
+  .xuanguan {
+    width: 40px;
+    height: 170px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+}
+.dating {
+  width: 330px;
+  height: 630px;
+  position: absolute;
+  left: 10px;
+  top: 280px;
+  .bigui {
+    width: 40px;
+    height: 630px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+}
+.yangtai {
+  width: 450px;
+  height: 120px;
+  position: absolute;
+  left: 69px;
+  top: 930px;
+  .yanggaiguizi {
+    width: 70px;
+    height: 120px;
+    border: 1px solid #aaa;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}
+.shufang {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  left: 360px;
+  top: 610px;
+  .shujia {
+    width: 40px;
+    height: 300px;
+    border: 1px solid #aaa;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}
+.zhuwo {
+  width: 290px;
+  height: 365px;
+  position: absolute;
+  left: 630px;
+  top: 545px;
+  // background-color: #eee;
+  .yigui {
+    width: 180px;
+    height: 65px;
+    border: 1px solid #aaa;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}
+.ciwo {
+  width: 300px;
+  height: 290px;
+  position: absolute;
+  left: 620px;
+  top: 260px;
+  // background-color: #eee;
+  .yigui {
+    width: 180px;
+    height: 65px;
+    border: 1px solid #aaa;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
 /* 卫生间 */
