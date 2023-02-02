@@ -1,0 +1,86 @@
+div {
+  /* 用content作为宽高标准 */
+  box-sizing: content-box;
+}
+.magic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    color: blue;
+    cursor: pointer;
+    :hover {
+        color: green;
+    }
+}
+/* wall墙体，默认20厚度 */
+.s-s::after {
+  /* 使用attr函数 */
+  content: attr(datasize);
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 25px);
+  scale: 0.5;
+  z-index: 2;
+  background-color: #eee;
+  width: 50px;
+  text-align: center;
+}
+.w-thin {
+    width: 8px;
+    height: 8px;
+    background-color: #ddd;
+    border: 1px solid #666;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+// 梁
+.bridge {
+    width: 18px;
+    height: 18px;
+    border: 1px dotted #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+// 普通墙
+.normal-wall {
+    width: 18px;
+    height: 18px;
+    background-color: #ddd;
+    border: 1px solid #666;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.w {
+  width: 0px;
+  height: 0px;
+  /* background-color: #aaa; */
+  border: 10px solid #ccc;
+  margin: -10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.w::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -0.5px;
+  right: -0.5px;
+  bottom: -0.5px;
+  left: -0.5px;
+  background-color: red;
+  z-index: 2;
+}
+/* line线 */
+.l {
+  width: 1px;
+  height: 1px;
+  background-color: #aaa;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
