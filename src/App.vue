@@ -137,7 +137,7 @@
             <div class="d s-s" style="height: 75px;left: 8px;top: 70px"></div>
           </div>
           <!-- 厨房电器 -->
-          <div class="dianqi-list" v-show="showDianqiList">
+          <div class="dianqi-list s-s" v-show="showDianqiList">
             厨房用电器件：
             <div>煤气灶</div>
             <div>油烟机</div>
@@ -148,12 +148,19 @@
             <div>灯</div>
             <div>额外插座</div>
           </div>
+          <div class="dianqi-list dl-water s-s" v-show="showWaterList">
+            厨房用水器件：
+            <div>洗碗机</div>
+            <div>净水器</div>
+            <div>热水器</div>
+            <div>洗菜槽的水龙头</div>
+          </div>
         </div>
         <div class="zoulang">
           <!-- 玄关 -->
           <div class="xuanguan s-s"></div>
           <!-- 走廊电器 -->
-          <div class="dianqi-list" v-show="showDianqiList">
+          <div class="dianqi-list s-s" v-show="showDianqiList">
             走廊用电器件：
             <div>开关</div>
             <div>额外插座</div>
@@ -164,7 +171,7 @@
         <div class="dating">
           <!--  -->
           <div class="bigui s-s"></div>
-          <div class="dianqi-list" v-show="showDianqiList">
+          <div class="dianqi-list s-s" v-show="showDianqiList">
             大厅用电器件：
             <div>电视机</div>
             <div>立式空调</div>
@@ -177,7 +184,7 @@
         <div class="yangtai">
           <!--  -->
           <div class="yanggaiguizi s-s"></div>
-          <div class="dianqi-list" v-show="showDianqiList">
+          <div class="dianqi-list s-s" v-show="showDianqiList">
             阳台用电器件：
             <div>洗衣机</div>
             <div>烘干机</div>
@@ -186,12 +193,17 @@
             <div>额外插座</div>
             <div>灯</div>
           </div>
+          <div class="dianqi-list dl-water s-s" v-show="showWaterList">
+            阳台用水器件：
+            <div>洗衣机</div>
+            <div>水槽的水龙头</div>
+          </div>
         </div>
         <!-- 书房 -->
         <div class="shufang">
           <!--  -->
           <div class="shujia s-s"></div>
-          <div class="dianqi-list" v-show="showDianqiList">
+          <div class="dianqi-list s-s" v-show="showDianqiList">
             书房用电器件：
             <div>电脑</div>
             <div>射灯</div>
@@ -205,7 +217,7 @@
         <div class="zhuwo">
           <!--  -->
           <div class="yigui s-s"></div>
-          <div class="dianqi-list" v-show="showDianqiList">
+          <div class="dianqi-list s-s" v-show="showDianqiList">
             主卧用电器件：
             <div>投影仪</div>
             <div>开关</div>
@@ -217,7 +229,7 @@
         <div class="ciwo">
           <!--  -->
           <div class="yigui s-s"></div>
-          <div class="dianqi-list" v-show="showDianqiList">
+          <div class="dianqi-list s-s" v-show="showDianqiList">
             次卧用电器件：
             <div>开关</div>
             <div>额外插座</div>
@@ -237,6 +249,21 @@
           <div class="w-thin s-s show-border" style="height: 228px;left: 140px; top: 10px;"></div>
           <div class="w-thin s-s show-border" style="width: 128px;left: 10px; top: 110px;"></div>
           <div class="w-thin s-s show-border" style="width: 258px;left: 10px; top: 240px;"></div>
+          <!-- 用电用水 -->
+          <div class="dianqi-list s-s" v-show="showDianqiList">
+            洗手间用电器件：
+            <div>开关</div>
+            <div>额外插座</div>
+            <div>吸顶灯、床头灯</div>
+          </div>
+          <div class="dianqi-list dl-water s-s" v-show="showWaterList">
+            洗手间用水器件：
+            <div>洗脸盆水龙头</div>
+            <div>卫生间马桶</div>
+            <div>洗澡间喷头</div>
+            <div>洗澡间蹲便</div>
+            <div>洗拖把水龙头</div>
+          </div>
         </div>
       </div>
     </div>
@@ -253,8 +280,19 @@ export default {
       showWaterList: false
     }
   },
+  watch: {
+    showDianqiList: function (val) {
+      val && setTimeout(() => {
+        this.setBoxSize()
+      }); 
+    }
+  },
   mounted() {
-    Array.prototype.forEach.call(
+    this.setBoxSize()
+  },
+  methods: {
+    setBoxSize() {
+      Array.prototype.forEach.call(
       document.getElementsByClassName("s-s"),
       element => {
         const borderLength = element.className.indexOf('show-border') > -1 ? 2 : 0
@@ -267,6 +305,7 @@ export default {
         );
       }
     );
+    }
   }
 };
 </script>
