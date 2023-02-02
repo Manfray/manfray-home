@@ -95,7 +95,11 @@
         <div class="kitchen">
           <!-- 墙壁 -->
           <div class="w s-s" style="width: 240px"></div>
-          <div class="w s-s" style="height: 250px; left: 100%"></div>
+          <div class="w s-s" style="height: 85px; left: 100%;border-bottom: none;"></div>
+          <div class="normal-wall show-border s-s" style="height: 108px; left: 230px;top: 85px;">
+            <div class="dianqi-name">窗户</div>
+          </div>
+          <div class="w s-s" style="height: 55px; left: 100%;top: 205px;border-top: none;"></div>
           <div class="w s-s" style="width: 80px; left: 160px; top: 250px"></div>
           <div class="w s-s" style="height: 20px; left: 160px; top: 250px"></div>
           <div class="normal-wall show-border s-s" style="width: 158px; top: 260px;left:-10px;"></div>
