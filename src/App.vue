@@ -102,14 +102,15 @@
           <div class="normal-wall show-border s-s" style="height: 88px; left: -10px;top:10px;"></div>
           <div class="normal-wall show-border s-s" style="height: 13px; top: 245px; left: -10px;"></div>
           <!-- 线 -->
-          <div class="l s-s" style="width: 170px; left: 10px; top: 60px"></div>
-          <div class="l s-s" style="width: 50px; left: 180px; top: 60px"></div>
-          <div class="l s-s" style="height: 50px; left: 180px; top: 10px"></div>
-          <div class="l s-s" style="height: 130px; left: 180px; top: 60px"></div>
-          <div class="l s-s" style="width: 70px; left: 110px; top: 190px"></div>
-          <div class="l s-s" style="width: 50px; left: 180px; top: 190px"></div>
-          <div class="l s-s" style="height: 50px; left: 180px; top: 190px"></div>
-          <div class="l s-s" style="height: 70px; left: 110px; top: 190px"></div>
+          <div class="l s-s" style="width: 158px; left: 10px; top: 60px"></div>
+          <div class="l s-s" style="width: 62px; left: 168px; top: 60px"></div>
+          <div class="l s-s" style="height: 50px; left: 168px; top: 10px"></div>
+          <div class="l s-s" style="height: 140px; left: 168px; top: 60px"></div>
+          <div class="l s-s" style="width: 58px; left: 110px; top: 200px"></div>
+          <div class="l s-s" style="width: 100px; left: 10px; top: 200px"></div>
+          <div class="l s-s" style="width: 62px; left: 168px; top: 200px"></div>
+          <div class="l s-s" style="height: 40px; left: 168px; top: 200px"></div>
+          <div class="l s-s" style="height: 60px; left: 110px; top: 200px"></div>
           <!-- 冰箱 -->
           <div class="freezer s-s"></div>
           <!-- 排烟管道 -->
@@ -124,9 +125,37 @@
           <div class="ranqizao s-s">
             <div class="dianqi-name">油烟机</div>
           </div>
+          <!-- 洗碗机 -->
+          <div class="xiwanji s-s">
+            <div class="dianqi-name">洗碗机</div>
+            <el-popover
+              placement="bottom"
+              title="装修参考"
+              width="300"
+              trigger="click">
+              <el-carousel height="300px" :autoplay="false" arrow="always">
+                <el-carousel-item v-for="item in 4" :key="item" style="height:300px">
+                  <img :src="`./xiwanji/${item}.jpg`" alt="" style="height: 100%">
+                </el-carousel-item>
+              </el-carousel>
+              <i slot="reference" class="magic el-icon-magic-stick" style="top: 20px;left: 10px;"></i>
+            </el-popover>
+          </div>
           <!-- 洗手池 -->
           <div class="xishouchi s-s">
             <div class="dianqi-name">洗手池</div>
+            <el-popover
+              placement="bottom"
+              title="装修参考"
+              width="300"
+              trigger="click">
+              <el-carousel height="300px" :autoplay="false" arrow="always">
+                <el-carousel-item v-for="item in 3" :key="item" style="height:300px">
+                  <img :src="`./xishouchi/${item}.jpg`" alt="" style="height: 100%">
+                </el-carousel-item>
+              </el-carousel>
+              <i slot="reference" class="magic el-icon-magic-stick" style="top: 20px;left: 10px;"></i>
+            </el-popover>
           </div>
           <!-- 门 -->
           <div
@@ -345,7 +374,7 @@ export default {
     border: 1px solid #aaa;
     position: absolute;
     left: 13px;
-    bottom: 13px;
+    bottom: 11px;
   }
   .paiyanguandao { // 排烟管道
     width: 45px;
@@ -371,13 +400,21 @@ export default {
     left: 75px;
     top: 14px;
   }
-  .xishouchi {
-    width: 40px;
+  .xiwanji {
+    width: 60px;
     height: 60px;
     border: 1px solid #aaa;
     position: absolute;
-    left: 185px;
-    top: 80px;
+    left: 169px;
+    top: 61px;
+  }
+  .xishouchi {
+    width: 45px;
+    height: 75px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 175px;
+    top: 124px;
   }
 }
 // 走廊
