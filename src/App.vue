@@ -1,13 +1,5 @@
 <template>
-  <div
-    id="app"
-    style="
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 50px;
-    "
-  >
+  <div id="app" style="padding: 10px;">
     <div style="margin: -10px">
       <!-- 房屋设计 -->
       <div>
@@ -150,11 +142,7 @@ export default {
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
 /* 门 */
