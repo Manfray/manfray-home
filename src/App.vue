@@ -17,32 +17,24 @@
           v-model="showWaterList"
           active-color="blue">
         </el-switch>
-        <div>备注：1、厨房的洗碗机放哪里？2、大厅有立式空调，最左边的壁柜怎么放？</div>
+        <div>
+          备注：<br/>
+          1、阳台到沙发和书桌中间的位置怎么设计；<br/>
+          2、阳台的洗衣机摆放位置;<br/>
+          3、阳台操作台怎么设计，比如洗手池（一定要吗），做个架子？，下面做个拖把清洗槽？
+        </div>
       </div>
       <!-- 整个房子 -->
       <div class="home">
         <div class="w s-s" style="height: 840px;top:80px;"></div>
-        <!-- 厨房素材 -->
-        <el-popover
-          placement="bottom"
-          title="装修参考"
-          width="300"
-          trigger="click">
-          <el-carousel height="300px" :autoplay="false" arrow="always">
-            <el-carousel-item v-for="item in 3" :key="item" style="height:300px">
-              <img :src="`./chufang/${item}.jpg`" alt="" style="height: 100%">
-            </el-carousel-item>
-          </el-carousel>
-          <i slot="reference" class="magic el-icon-magic-stick" style="top: 170px;left: 153px;"></i>
-        </el-popover>
         <!-- 墙柜素材 -->
         <el-popover
           placement="bottom"
           title="装修参考"
           width="300"
           trigger="click">
-          <el-carousel height="300px" :autoplay="false" arrow="always">
-            <el-carousel-item v-for="item in 3" :key="item" style="height:300px">
+          <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+            <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
               <img :src="`./qianggui/${item}.jpg`" alt="" style="height: 100%">
             </el-carousel-item>
           </el-carousel>
@@ -54,8 +46,8 @@
           title="装修参考"
           width="300"
           trigger="click">
-          <el-carousel height="300px" :autoplay="false" arrow="always">
-            <el-carousel-item v-for="item in 2" :key="item" style="height:300px">
+          <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+            <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
               <img :src="`./yangtai/${item}.jpg`" alt="" style="height: 100%">
             </el-carousel-item>
           </el-carousel>
@@ -67,8 +59,8 @@
           title="装修参考"
           width="300"
           trigger="click">
-          <el-carousel height="300px" :autoplay="false" arrow="always">
-            <el-carousel-item v-for="item in 2" :key="item" style="height:300px">
+          <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+            <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
               <img :src="`./xishoujian/${item}.jpg`" alt="" style="height: 100%">
             </el-carousel-item>
           </el-carousel>
@@ -125,9 +117,9 @@
           <div class="youyanji s-s">
             <div class="dianqi-name">油烟机</div>
           </div>
-          <!-- 油烟机 -->
+          <!-- 燃气灶 -->
           <div class="ranqizao s-s">
-            <div class="dianqi-name">油烟机</div>
+            <div class="dianqi-name">燃气灶</div>
           </div>
           <!-- 洗碗机 -->
           <div class="xiwanji s-s">
@@ -137,8 +129,8 @@
               title="装修参考"
               width="300"
               trigger="click">
-              <el-carousel height="300px" :autoplay="false" arrow="always">
-                <el-carousel-item v-for="item in 4" :key="item" style="height:300px">
+              <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+                <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
                   <img :src="`./xiwanji/${item}.jpg`" alt="" style="height: 100%">
                 </el-carousel-item>
               </el-carousel>
@@ -153,12 +145,28 @@
               title="装修参考"
               width="300"
               trigger="click">
-              <el-carousel height="300px" :autoplay="false" arrow="always">
-                <el-carousel-item v-for="item in 3" :key="item" style="height:300px">
+              <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+                <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
                   <img :src="`./xishouchi/${item}.jpg`" alt="" style="height: 100%">
                 </el-carousel-item>
               </el-carousel>
               <i slot="reference" class="magic el-icon-magic-stick" style="top: 20px;left: 10px;"></i>
+            </el-popover>
+          </div>
+          <!-- 储物架 -->
+          <div class="chuwujia s-s">
+            <div class="dianqi-name">储物架</div>
+            <el-popover
+              placement="bottom"
+              title="装修参考"
+              width="300"
+              trigger="click">
+              <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+                <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+                  <img :src="`./bingxiang/${item}.jpg`" alt="" style="height: 100%">
+                </el-carousel-item>
+              </el-carousel>
+              <i slot="reference" class="magic el-icon-magic-stick" style="top: 0px;left: 37px;"></i>
             </el-popover>
           </div>
           <!-- 门 -->
@@ -192,6 +200,19 @@
         <div class="zoulang">
           <!-- 玄关 -->
           <div class="xuanguan s-s"></div>
+          <!-- 玄关素材 -->
+          <el-popover
+            placement="bottom"
+            title="装修参考"
+            width="300"
+            trigger="click">
+            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+                <img :src="`./xuanguan/${item}.jpg`" alt="" style="height: 100%">
+              </el-carousel-item>
+            </el-carousel>
+            <i slot="reference" class="magic el-icon-magic-stick" style="top: 69px;left: 102px;"></i>
+          </el-popover>
           <!-- 走廊电器 -->
           <div class="dianqi-list s-s" v-show="showDianqiList">
             走廊用电器件：
@@ -202,8 +223,37 @@
         </div>
         <!-- 大厅 -->
         <div class="dating">
-          <!--  -->
+          <!-- 壁柜 -->
           <div class="bigui s-s"></div>
+          <!-- 电视65寸：144*81 -->
+          <div class="dianshi-loukong s-s">
+            <div class="dianqi-name">电视柜</div>
+          </div>
+          <div class="dianshi s-s">
+            <div class="dianqi-name">电视</div>
+          </div>
+          <div class="dianshi-cegui s-s">
+            <div class="dianqi-name">侧柜</div>
+          </div>
+          <div class="shafa s-s" :class="switchTable ? 'open' : 'close'">
+            <div class="dianqi-name">沙发</div>
+          </div>
+          <!-- 空调 -->
+          <div class="kongtiao s-s">
+            <div class="dianqi-name">空调</div>
+            <el-popover
+              placement="bottom"
+              title="装修参考"
+              width="300"
+              trigger="click">
+              <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+                <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+                  <img :src="`./kongtiao/${item}.jpg`" alt="" style="height: 100%">
+                </el-carousel-item>
+              </el-carousel>
+              <i slot="reference" class="magic el-icon-magic-stick" style="top: 10px;left: 35px;"></i>
+            </el-popover>
+          </div>
           <div class="dianqi-list s-s" v-show="showDianqiList">
             大厅用电器件：
             <div>电视机</div>
@@ -217,6 +267,21 @@
         <div class="yangtai">
           <!--  -->
           <div class="yanggaiguizi s-s"></div>
+          <div class="xiyiji s-s">
+            <div class="dianqi-name">洗衣机 、 烘干机</div>
+            <el-popover
+              placement="bottom"
+              title="装修参考"
+              width="300"
+              trigger="click">
+              <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+                <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+                  <img :src="`./xiyiji/${item}.jpg`" alt="" style="height: 100%">
+                </el-carousel-item>
+              </el-carousel>
+              <i slot="reference" class="magic el-icon-magic-stick" style="top: 10px;left: 10px;"></i>
+            </el-popover>
+          </div>
           <div class="dianqi-list s-s" v-show="showDianqiList">
             阳台用电器件：
             <div>洗衣机</div>
@@ -235,7 +300,17 @@
         <!-- 书房 -->
         <div class="shufang">
           <!--  -->
-          <div class="shujia s-s"></div>
+          <div class="zhuozi s-s" :class="switchTable ? 'open' : 'close'">
+            <div class="dianqi-name">桌子</div>
+            切换
+            <el-switch
+              v-model="switchTable"
+              active-color="yellow">
+            </el-switch>
+          </div>
+          <div class="shujia s-s">
+            <div class="dianqi-name">书架</div>
+          </div>
           <div class="dianqi-list s-s" v-show="showDianqiList">
             书房用电器件：
             <div>电脑</div>
@@ -245,6 +320,10 @@
             <div>额外插座</div>
             <div>射灯、吸顶灯</div>
           </div>
+          <!-- 标线 -->
+          <div v-show="switchTable" class="mark-line v s-s" style="width: 70px;top:137px;left: 133px"></div>
+          <div v-show="switchTable" class="mark-line v s-s" style="width: 70px;top:137px;left: -33px"></div>
+          <div v-show="switchTable" class="mark-line h s-s" style="height: 60px; top:237px;left: 124px"></div>
         </div>
         <!-- 主卧 -->
         <div class="zhuwo">
@@ -310,20 +389,27 @@ export default {
   data() {
     return {
       showDianqiList: false,
-      showWaterList: false
+      showWaterList: false,
+      switchTable: false,
     }
   },
   watch: {
-    showDianqiList: function (val) {
-      val && setTimeout(() => {
-        this.setBoxSize()
-      }); 
+    showDianqiList(val) {
+      this.reRenderBoxSize(val)
+    },
+    switchTable(val) {
+      this.reRenderBoxSize(val)
     }
   },
   mounted() {
     this.setBoxSize()
   },
   methods: {
+    reRenderBoxSize(val) {
+      val && setTimeout(() => {
+        this.setBoxSize()
+      }); 
+    },
     setBoxSize() {
       Array.prototype.forEach.call(
       document.getElementsByClassName("s-s"),
@@ -420,11 +506,20 @@ export default {
     left: 175px;
     top: 124px;
   }
+  .chuwujia {
+    width: 54px;
+    height: 36px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 112px;
+    top: 202px;
+  }
+
 }
 // 走廊
 .zoulang {
   width: 170px;
-  height: 170px;
+  height: 150px;
   position: absolute;
   left: 10px;
   top: 90px;
@@ -451,6 +546,50 @@ export default {
     left: 0px;
     top: 0px;
   }
+  .dianshi-loukong {
+    width: 40px;
+    height: 180px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 0px;
+    top: 380px;
+  }
+  .dianshi {
+    width: 10px;
+    height: 150px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 3px;
+    top: 395px;
+  }
+  .dianshi-cegui {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 0px;
+    top: 560px;
+  }
+  .shafa {
+    width: 90px;
+    height: 225px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 260px;
+    top: 360px;
+    &.open {
+      left: 225px;
+    }
+  }
+  .kongtiao {
+    width: 43px;
+    height: 43px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 604px;
+  }
 }
 .yangtai {
   width: 450px;
@@ -460,11 +599,20 @@ export default {
   top: 930px;
   .yanggaiguizi {
     width: 70px;
-    height: 120px;
+    height: 132px;
+    border: 1px solid #aaa;
+    border-top-left-radius: 19px;
+    position: absolute;
+    top: -20px;
+    right: 0px;
+  }
+  .xiyiji {
+    width: 63px;
+    height: 60px;
     border: 1px solid #aaa;
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 50px;
+    right: 3px;
   }
 }
 .shufang {
@@ -480,6 +628,17 @@ export default {
     position: absolute;
     top: 0px;
     right: 0px;
+  }
+  .zhuozi {
+    width: 90px;
+    height: 225px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    &.open {
+      left: 40px;
+    }
   }
 }
 .zhuwo {

@@ -114,3 +114,24 @@ div {
   top: 0;
   left: 0;
 }
+.mark-line {
+  width: 1px;
+  height: 1px;
+  border: 8px solid #000;
+  background-color: #aaa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  &.v {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+    border-left-width: 3px;
+    border-right-width: 3px;
+  }
+  &.h {
+    border-left-color: #fff;
+    border-right-color: #fff;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+  }
+}
