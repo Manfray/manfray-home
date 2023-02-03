@@ -89,7 +89,7 @@
         <div class="w s-s" style="height: 300px;top:80px;top:620px;left: 620px;"></div>
         <div class="w s-s" style="width: 490px;top:1060px;left: 40px;"></div>
         <!-- 横梁 -->
-        <div class="bridge s-s show-border" style="width: 168px;left: 10px; top: 260px;"></div>
+        <div class="bridge s-s show-border" style="width: 168px;left: 10px; top: 240px;"></div>
         <div class="bridge s-s show-border" style="height: 550px;left: 340px; top: 500px;"></div>
         <!-- 厨房 -->
         <div class="kitchen">
@@ -430,7 +430,7 @@ export default {
   top: 90px;
   .xuanguan {
     width: 40px;
-    height: 170px;
+    height: 150px;
     border: 1px solid #aaa;
     position: absolute;
     left: 0px;
@@ -439,13 +439,13 @@ export default {
 }
 .dating {
   width: 330px;
-  height: 630px;
+  height: 650px;
   position: absolute;
   left: 10px;
-  top: 280px;
+  top: 260px;
   .bigui {
     width: 40px;
-    height: 630px;
+    height: 650px;
     border: 1px solid #aaa;
     position: absolute;
     left: 0px;
