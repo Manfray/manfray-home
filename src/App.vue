@@ -67,7 +67,7 @@
           <i slot="reference" class="magic el-icon-magic-stick" style="top: 423px;left: 417px;"></i>
         </el-popover>
         <div class="normal-wall show-border s-s" style="width: 178px;top:70px;left: 10px;"></div>
-        <div class="w s-s" style="width: 80px;top:920px;border-right: none"></div>
+        <div class="w v s-s" style="width: 80px;top:920px;border-right: none"></div>
         <div class="normal-wall show-border s-s" style="height: 118px;top:930px;left: 50px;"></div>
         <div class="normal-wall show-border s-s" style="height: 118px;top:930px;left: 520px;"></div>
         <div class="w s-s" style="width: 105px;top:80px;top:920px;left: 515px;"></div>
@@ -225,6 +225,10 @@
         <div class="dating">
           <!-- 壁柜 -->
           <div class="bigui s-s"></div>
+          <!-- 餐桌 -->
+          <div class="canzhuo s-s">
+            <div class="dianqi-name">餐桌</div>
+          </div>
           <!-- 电视65寸：144*81 -->
           <div class="dianshi-loukong s-s">
             <div class="dianqi-name">电视柜</div>
@@ -262,6 +266,7 @@
             <div>额外插座</div>
             <div>射灯、吸顶灯</div>
           </div>
+          <div class="mark-line h s-s" style="height: 105px;top:240px;left: 332px"></div>
         </div>
         <!-- 阳台 -->
         <div class="yangtai">
@@ -377,6 +382,10 @@
             <div>洗拖把水龙头</div>
           </div>
         </div>
+        <!-- 辅助线 -->
+        <div class="fzx fzx-x" style="width: 100%;top: 500px;"></div>
+        <div class="fzx fzx-x" style="width: 100%;top: 610px;"></div>
+        <div class="fzx fzx-y" style="height: 100%;"></div>
       </div>
     </div>
   </div>
@@ -545,6 +554,14 @@ export default {
     position: absolute;
     left: 0px;
     top: 0px;
+  }
+  .canzhuo {
+    width: 140px;
+    height: 70px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 190px;
+    top: 95px;
   }
   .dianshi-loukong {
     width: 40px;
