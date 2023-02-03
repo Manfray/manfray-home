@@ -267,6 +267,8 @@
             <div>射灯、吸顶灯</div>
           </div>
           <div class="mark-line h s-s" style="height: 105px;top:240px;left: 332px"></div>
+          <div class="mark-line h s-s" style="height: 70px;top:167px;left: 216px"></div>
+          <div class="mark-line h s-s" style="height: 70px;top:20px;left: 216px"></div>
         </div>
         <!-- 阳台 -->
         <div class="yangtai">
@@ -384,6 +386,7 @@
         </div>
         <!-- 辅助线 -->
         <div class="fzx fzx-x" style="width: 100%;top: 500px;"></div>
+        <div class="fzx fzx-x" style="width: 100%;top: 555px;"></div>
         <div class="fzx fzx-x" style="width: 100%;top: 610px;"></div>
         <div class="fzx fzx-y" style="height: 100%;"></div>
       </div>
@@ -663,7 +666,7 @@ export default {
   height: 365px;
   position: absolute;
   left: 630px;
-  top: 545px;
+  top: 555px;
   // background-color: #eee;
   .yigui {
     width: 180px;
@@ -676,7 +679,7 @@ export default {
 }
 .ciwo {
   width: 300px;
-  height: 290px;
+  height: 295px;
   position: absolute;
   left: 620px;
   top: 260px;
@@ -686,7 +689,7 @@ export default {
     height: 65px;
     border: 1px solid #aaa;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     right: 0;
   }
 }
