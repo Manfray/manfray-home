@@ -197,6 +197,7 @@
             <div>洗菜槽的水龙头</div>
           </div>
         </div>
+        <!-- 走廊 -->
         <div class="zoulang">
           <!-- 玄关 -->
           <div class="xuanguan s-s"></div>
@@ -220,6 +221,7 @@
             <div>额外插座</div>
             <div>灯</div>
           </div>
+          <img src="../public/common/men.jpg" alt="" class="men">
         </div>
         <!-- 大厅 -->
         <div class="dating">
@@ -343,6 +345,8 @@
             <div>额外插座</div>
             <div>吸顶灯、床头灯</div>
           </div>
+          <div class="w-thin s-s show-border" style="height: 130px;left: 100px; top: -66px;"></div>
+          <img src="../public/common/men.jpg" alt="" class="men">
         </div>
         <!-- 次卧 -->
         <div class="ciwo">
@@ -354,6 +358,7 @@
             <div>额外插座</div>
             <div>吸顶灯、床头灯</div>
           </div>
+          <img src="../public/common/men.jpg" alt="" class="men">
         </div>
         <!-- 洗手间 -->
         <div class="washroom">
@@ -543,6 +548,11 @@ export default {
     left: 0px;
     top: 0px;
   }
+  .men {
+    transform: rotateY(180deg);
+    top: -104px;
+    left: 69px;
+  }
 }
 .dating {
   width: 330px;
@@ -676,6 +686,11 @@ export default {
     top: 0px;
     right: 0px;
   }
+  .men {
+    transform: rotateX(180deg);
+    top: 53px;
+    left: 0px;
+  }
 }
 .ciwo {
   width: 300px;
@@ -691,6 +706,10 @@ export default {
     position: absolute;
     bottom: 0px;
     right: 0;
+  }
+  .men {
+    top: 143px;
+    left: 10px;
   }
 }
 /* 卫生间 */
