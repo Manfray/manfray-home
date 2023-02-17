@@ -371,8 +371,15 @@
           <!-- 薄墙 -->
           <div class="w-thin s-s show-border" style="height: 228px;left: 260px; top: 10px;"></div>
           <div class="w-thin s-s show-border" style="height: 228px;left: 140px; top: 10px;"></div>
-          <div class="w-thin s-s show-border" style="width: 128px;left: 10px; top: 110px;"></div>
+          <div class="w-thin s-s show-border" style="width: 128px;left: 10px; top: 119px;"></div>
           <div class="w-thin s-s show-border" style="width: 258px;left: 10px; top: 240px;"></div>
+
+          <img src="../public/common/men.jpg" alt="" class="men men1"/>
+          <img src="../public/common/men.jpg" alt="" class="men men2"/>
+          <div class="matong s-s"></div>
+          <div class="xishouchi s-s"></div>
+          <div class="muyu s-s"></div>
+          <div class="dunbian s-s"></div>
           <!-- 用电用水 -->
           <div class="dianqi-list s-s" v-show="showDianqiList">
             洗手间用电器件：
@@ -719,5 +726,56 @@ export default {
   position: absolute;
   left: 350px;
   top: 250px;
+  .matong{
+    width: 70px;
+    height: 40px;
+    border: 1px solid #aaa;
+    position: absolute;
+    top: 44px;
+    left: 10px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+  .xishouchi{
+    width: 50px;
+    height: 110px;
+    border: 1px solid #aaa;
+    position: absolute;
+    top: 129px;
+    left: 10px;
+  }
+  .muyu{
+    width: 110px;
+    height: 94px;
+    border: 1px solid #aaa;
+    position: absolute;
+    top: 10px;
+    left: 150px;
+  }
+  .dunbian{
+    width: 73px;
+    height: 45px;
+    border: 1px solid #aaa;
+    position: absolute;
+    top: 130px;
+    right: 10px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+  .men1 {
+    transform: rotateY(180deg);
+    width: 70px;
+    height: 70px;
+    top: 61px;
+    left: 67px;
+  }
+  .men2 {
+    // transform: rotateX(180deg);
+    // transform: rotateY(180deg);
+    width: 70px;
+    height: 70px;
+    top: 168px;
+    left: 142px;
+  }
 }
 </style>
