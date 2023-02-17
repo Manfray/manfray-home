@@ -358,7 +358,7 @@
           <!-- 薄墙 -->
           <div class="w-thin s-s show-border" style="height: 228px;left: 260px; top: 10px;"></div>
           <div class="w-thin s-s show-border" style="height: 228px;left: 140px; top: 10px;"></div>
-          <div class="w-thin s-s show-border" style="width: 128px;left: 10px; top: 119px;"></div>
+          <div class="w-thin s-s show-border" style="width: 128px;left: 10px; top: 109px;"></div>
           <div class="w-thin s-s show-border" style="width: 258px;left: 10px; top: 240px;"></div>
 
           <img src="../public/common/men.jpg" alt="" class="men men1"/>
@@ -757,17 +757,17 @@ export default {
     height: 40px;
     border: 1px solid #aaa;
     position: absolute;
-    top: 44px;
+    top: 39px;
     left: 10px;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
   }
   .xishouchi{
     width: 50px;
-    height: 110px;
+    height: 120px;
     border: 1px solid #aaa;
     position: absolute;
-    top: 129px;
+    top: 119px;
     left: 10px;
   }
   .muyu{
@@ -792,7 +792,7 @@ export default {
     transform: rotateY(180deg);
     width: 70px;
     height: 70px;
-    top: 61px;
+    top: 51px;
     left: 67px;
   }
   .men2 {
