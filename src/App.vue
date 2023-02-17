@@ -53,19 +53,6 @@
           </el-carousel>
           <i slot="reference" class="magic el-icon-magic-stick" style="top: 850px;left: 85px;"></i>
         </el-popover>
-        <!-- 洗手间素材 -->
-        <el-popover
-          placement="bottom"
-          title="装修参考"
-          width="300"
-          trigger="click">
-          <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-            <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
-              <img :src="`./xishoujian/${item}.jpg`" alt="" style="height: 100%">
-            </el-carousel-item>
-          </el-carousel>
-          <i slot="reference" class="magic el-icon-magic-stick" style="top: 423px;left: 417px;"></i>
-        </el-popover>
         <div class="normal-wall show-border s-s" style="width: 178px;top:70px;left: 10px;"></div>
         <div class="w v s-s" style="width: 80px;top:920px;border-right: none"></div>
         <div class="normal-wall show-border s-s" style="height: 118px;top:930px;left: 50px;"></div>
@@ -395,6 +382,45 @@
             <div>洗澡间蹲便</div>
             <div>洗拖把水龙头</div>
           </div>
+          <!-- 洗手池素材 -->
+          <el-popover
+            placement="bottom"
+            title="装修参考"
+            width="300"
+            trigger="click">
+            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+                <img :src="`./xishoujian/${item}.jpg`" alt="" style="height: 100%">
+              </el-carousel-item>
+            </el-carousel>
+            <i slot="reference" class="magic el-icon-magic-stick" style="top: 177px;left: 70px;"></i>
+          </el-popover>
+          <!-- 马桶素材 -->
+          <el-popover
+            placement="bottom"
+            title="装修参考"
+            width="300"
+            trigger="click">
+            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 2" :key="item" style="height:300px">
+                <img :src="`./matong/${item}.jpg`" alt="" style="height: 100%">
+              </el-carousel-item>
+            </el-carousel>
+            <i slot="reference" class="magic el-icon-magic-stick" style="top: 57px;left: 70px;"></i>
+          </el-popover>
+          <!-- 洗澡间 -->
+          <el-popover
+            placement="bottom"
+            title="装修参考"
+            width="300"
+            trigger="click">
+            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 4" :key="item" style="height:300px">
+                <img :src="`./xizaojian/${item}.jpg`" alt="" style="height: 100%">
+              </el-carousel-item>
+            </el-carousel>
+            <i slot="reference" class="magic el-icon-magic-stick" style="top: 109px;left: 190px;"></i>
+          </el-popover>
         </div>
         <!-- 辅助线 -->
         <div class="fzx fzx-x" style="width: 100%;top: 500px;"></div>
