@@ -255,6 +255,10 @@
             <div>额外插座</div>
             <div>射灯、吸顶灯</div>
           </div>
+          <div class="dianqi-list dl-water s-s" v-show="showWaterList">
+            大厅用水器件：
+            <div>暖气片</div>
+          </div>
           <div class="mark-line h s-s" style="height: 105px;top:240px;left: 332px"></div>
           <div class="mark-line h s-s" style="height: 70px;top:167px;left: 216px"></div>
           <div class="mark-line h s-s" style="height: 70px;top:20px;left: 216px"></div>
@@ -291,6 +295,7 @@
             阳台用水器件：
             <div>洗衣机</div>
             <div>水槽的水龙头</div>
+            <div>暖气片?</div>
           </div>
         </div>
         <!-- 书房 -->
@@ -316,6 +321,10 @@
             <div>额外插座</div>
             <div>射灯、吸顶灯</div>
           </div>
+          <div class="dianqi-list dl-water s-s" v-show="showWaterList">
+            书房用水器件：
+            <div>暖气片</div>
+          </div>
           <!-- 标线 -->
           <div v-show="switchTable" class="mark-line v s-s" style="width: 70px;top:137px;left: 133px"></div>
           <div v-show="switchTable" class="mark-line v s-s" style="width: 70px;top:137px;left: -33px"></div>
@@ -332,6 +341,10 @@
             <div>额外插座</div>
             <div>吸顶灯、床头灯</div>
           </div>
+          <div class="dianqi-list dl-water s-s" v-show="showWaterList">
+            主卧用水器件：
+            <div>暖气片</div>
+          </div>
           <div class="w-thin s-s show-border" style="height: 130px;left: 100px; top: -66px;"></div>
           <img src="../public/common/men.jpg" alt="" class="men">
         </div>
@@ -344,6 +357,10 @@
             <div>开关</div>
             <div>额外插座</div>
             <div>吸顶灯、床头灯</div>
+          </div>
+          <div class="dianqi-list dl-water s-s" v-show="showWaterList">
+            次卧用水器件：
+            <div>暖气片</div>
           </div>
           <img src="../public/common/men.jpg" alt="" class="men">
         </div>
