@@ -815,6 +815,7 @@ export default {
   .men2 {
     // transform: rotateX(180deg);
     // transform: rotateY(180deg);
+    transform: rotate3d(-1, 1, 0, 180deg);
     width: 70px;
     height: 70px;
     top: 168px;
