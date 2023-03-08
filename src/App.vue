@@ -396,7 +396,7 @@
           <div class="w-thin s-s show-border" style="height: 228px;left: 260px; top: 10px;"></div>
           <div class="w-thin s-s show-border" style="height: 228px;left: 140px; top: 10px;"></div>
           <div class="w-thin s-s show-border" style="width: 128px;left: 10px; top: 109px;"></div>
-          <div class="w-thin s-s show-border" style="width: 50px;left: 10px; top: 240px;"></div>
+          <div class="w-thin s-s show-border" style="width: 55px;left: 10px; top: 240px;"></div>
           <div class="w-thin s-s show-border" style="width: 128px;left: 140px; top: 240px;"></div>
 
           <img src="../public/common/men.jpg" alt="" class="men men1"/>
