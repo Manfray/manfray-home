@@ -380,7 +380,7 @@
           <img src="../public/common/men.jpg" alt="" class="men">
         </div>
         <!-- 洗手间 1 -->
-        <div v-show="weishengjianType === 1" class="washroom1" style="display: none;">
+        <div v-show="weishengjianType === 1" class="washroom1">
           <div class="xiashuiguan s-s">
             <div class="dianqi-name">污水管</div>
           </div>
@@ -394,7 +394,8 @@
           <div class="w-thin s-s show-border" style="height: 228px;left: 260px; top: 10px;"></div>
           <div class="w-thin s-s show-border" style="height: 228px;left: 140px; top: 10px;"></div>
           <div class="w-thin s-s show-border" style="width: 128px;left: 10px; top: 109px;"></div>
-          <div class="w-thin s-s show-border" style="width: 258px;left: 10px; top: 240px;"></div>
+          <div class="w-thin s-s show-border" style="width: 50px;left: 10px; top: 240px;"></div>
+          <div class="w-thin s-s show-border" style="width: 128px;left: 140px; top: 240px;"></div>
 
           <img src="../public/common/men.jpg" alt="" class="men men1"/>
           <img src="../public/common/men.jpg" alt="" class="men men2"/>
@@ -464,7 +465,7 @@
           </el-popover>
         </div>
         <!-- 洗手间 2 -->
-        <div v-show="weishengjianType === 2" class="washroom2" style="display: none;">
+        <div v-show="weishengjianType === 2" class="washroom2">
           <div class="xiashuiguan s-s">
             <div class="dianqi-name">污水管</div>
           </div>
