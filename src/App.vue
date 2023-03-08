@@ -24,6 +24,12 @@
             v-model="xiyijiAlignleft"
             active-color="green">
           </el-switch><br/>
+          <span>卫生间设计图</span>
+          <el-radio-group v-model="weishengjianType">
+            <el-radio :label="1">A</el-radio>
+            <el-radio :label="2">B</el-radio>
+            <el-radio :label="3">C</el-radio>
+          </el-radio-group><br/>
         </div>
       </div>
       <!-- 整个房子 -->
@@ -373,8 +379,8 @@
           </div>
           <img src="../public/common/men.jpg" alt="" class="men">
         </div>
-        <!-- 洗手间 -->
-        <div class="washroom">
+        <!-- 洗手间 1 -->
+        <div v-show="weishengjianType === 1" class="washroom1" style="display: none;">
           <div class="xiashuiguan s-s">
             <div class="dianqi-name">污水管</div>
           </div>
@@ -401,6 +407,190 @@
           </div>
           <div class="dunbian s-s">
             <div class="dianqi-name">蹲便</div>
+          </div>
+          <!-- 用电用水 -->
+          <div class="dianqi-list s-s" v-show="showDianqiList">
+            洗手间用电器件：
+            <div>开关</div>
+            <div>额外插座</div>
+            <div>吸顶灯、床头灯</div>
+          </div>
+          <div class="dianqi-list dl-water s-s" v-show="showWaterList">
+            洗手间用水器件：
+            <div>洗脸盆水龙头</div>
+            <div>卫生间马桶</div>
+            <div>洗澡间喷头</div>
+            <div>洗澡间蹲便</div>
+            <div>洗拖把水龙头</div>
+          </div>
+          <!-- 洗手池素材 -->
+          <el-popover
+            placement="bottom"
+            title="装修参考"
+            width="300"
+            trigger="click">
+            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+                <img :src="`./xishoujian/${item}.jpg`" alt="" style="height: 100%">
+              </el-carousel-item>
+            </el-carousel>
+            <i slot="reference" class="magic el-icon-magic-stick" style="top: 177px;left: 70px;"></i>
+          </el-popover>
+          <!-- 马桶素材 -->
+          <el-popover
+            placement="bottom"
+            title="装修参考"
+            width="300"
+            trigger="click">
+            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 2" :key="item" style="height:300px">
+                <img :src="`./matong/${item}.jpg`" alt="" style="height: 100%">
+              </el-carousel-item>
+            </el-carousel>
+            <i slot="reference" class="magic el-icon-magic-stick" style="top: 57px;left: 70px;"></i>
+          </el-popover>
+          <!-- 洗澡间 -->
+          <el-popover
+            placement="bottom"
+            title="装修参考"
+            width="300"
+            trigger="click">
+            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 4" :key="item" style="height:300px">
+                <img :src="`./xizaojian/${item}.jpg`" alt="" style="height: 100%">
+              </el-carousel-item>
+            </el-carousel>
+            <i slot="reference" class="magic el-icon-magic-stick" style="top: 109px;left: 190px;"></i>
+          </el-popover>
+        </div>
+        <!-- 洗手间 2 -->
+        <div v-show="weishengjianType === 2" class="washroom2" style="display: none;">
+          <div class="xiashuiguan s-s">
+            <div class="dianqi-name">污水管</div>
+          </div>
+          <!-- 厚墙 -->
+          <div
+            class="w s-s"
+            style="height: 220px;top: 20px; border-top: none;margin-top: 0;"
+          ></div>
+          <div class="w s-s" style="width: 190px;left: 80px; margin-left: 0;border-left: 0;"></div>
+          <!-- 薄墙 -->
+          <div class="w-thin s-s show-border" style="height: 238px;left: 260px; top: 10px;"></div>
+          <div class="w-thin s-s show-border" style="height: 108px;left: 140px; top: 10px;"></div>
+          <div class="w-thin s-s show-border" style="height: 80px;left: 163px;top: 111px;transform: rotate(-35deg);"></div>
+          <div class="w-thin s-s show-border" style="width: 128px;left: 10px; top: 109px;"></div>
+          <div class="w-thin s-s show-border" style="width: 50px;left: 10px; top: 240px;"></div>
+          <div class="w-thin s-s show-border" style="width: 70px;left: 189px; top: 177px;"></div>
+          <!-- <div class="w-thin s-s show-border" style="height: 175px;left: 140px; top: 10px;"></div> -->
+          <!-- <div class="w-thin s-s show-border" style="width: 258px;left: 10px; top: 240px;"></div> -->
+
+          <img src="../public/common/men.jpg" alt="" class="men men1"/>
+          <!-- <img src="../public/common/men.jpg" alt="" class="men men2"/> -->
+          <div class="matong s-s"></div>
+          <div class="xishouchi s-s">
+            <div class="dianqi-name">洗手池</div>
+          </div>
+          <div class="muyu s-s">
+            <div class="dianqi-name">洗澡间</div>
+          </div>
+          <div class="dunbian s-s">
+            <div class="dianqi-name">蹲便</div>
+          </div>
+          <div class="xiyiji s-s">
+            <div class="dianqi-name">洗衣机、烘干机</div>
+          </div>
+          <!-- 用电用水 -->
+          <div class="dianqi-list s-s" v-show="showDianqiList">
+            洗手间用电器件：
+            <div>开关</div>
+            <div>额外插座</div>
+            <div>吸顶灯、床头灯</div>
+          </div>
+          <div class="dianqi-list dl-water s-s" v-show="showWaterList">
+            洗手间用水器件：
+            <div>洗脸盆水龙头</div>
+            <div>卫生间马桶</div>
+            <div>洗澡间喷头</div>
+            <div>洗澡间蹲便</div>
+            <div>洗拖把水龙头</div>
+          </div>
+          <!-- 洗手池素材 -->
+          <el-popover
+            placement="bottom"
+            title="装修参考"
+            width="300"
+            trigger="click">
+            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+                <img :src="`./xishoujian/${item}.jpg`" alt="" style="height: 100%">
+              </el-carousel-item>
+            </el-carousel>
+            <i slot="reference" class="magic el-icon-magic-stick" style="top: 177px;left: 70px;"></i>
+          </el-popover>
+          <!-- 马桶素材 -->
+          <el-popover
+            placement="bottom"
+            title="装修参考"
+            width="300"
+            trigger="click">
+            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 2" :key="item" style="height:300px">
+                <img :src="`./matong/${item}.jpg`" alt="" style="height: 100%">
+              </el-carousel-item>
+            </el-carousel>
+            <i slot="reference" class="magic el-icon-magic-stick" style="top: 57px;left: 70px;"></i>
+          </el-popover>
+          <!-- 洗澡间 -->
+          <el-popover
+            placement="bottom"
+            title="装修参考"
+            width="300"
+            trigger="click">
+            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 4" :key="item" style="height:300px">
+                <img :src="`./xizaojian/${item}.jpg`" alt="" style="height: 100%">
+              </el-carousel-item>
+            </el-carousel>
+            <i slot="reference" class="magic el-icon-magic-stick" style="top: 109px;left: 190px;"></i>
+          </el-popover>
+        </div>
+        <!-- 洗手间 3 -->
+        <div v-show="weishengjianType === 3" class="washroom3">
+          <div class="xiashuiguan s-s">
+            <div class="dianqi-name">污水管</div>
+          </div>
+          <!-- 厚墙 -->
+          <div
+            class="w s-s"
+            style="height: 220px;top: 20px; border-top: none;margin-top: 0;"
+          ></div>
+          <div class="w s-s" style="width: 190px;left: 80px; margin-left: 0;border-left: 0;"></div>
+          <!-- 薄墙 -->
+          <div class="w-thin s-s show-border" style="height: 238px;left: 260px; top: 10px;"></div>
+          <div class="w-thin s-s show-border" style="height: 238px;left: 140px; top: 10px;"></div>
+          <div class="w-thin s-s show-border" style="width: 128px;left: 10px; top: 101px;"></div>
+          <div class="w-thin s-s show-border" style="width: 55px;left: 10px; top: 240px;"></div>
+          <div class="w-thin s-s show-border" style="width: 108px;left: 150px; top: 177px;"></div>
+          <!-- <div class="w-thin s-s show-border" style="height: 175px;left: 140px; top: 10px;"></div> -->
+          <!-- <div class="w-thin s-s show-border" style="width: 258px;left: 10px; top: 240px;"></div> -->
+
+          <img src="../public/common/men.jpg" alt="" class="men men1"/>
+          <img src="../public/common/men.jpg" alt="" class="men men2"/>
+          <div class="matong s-s"></div>
+          <div class="xishouchi s-s">
+            <div class="dianqi-name">洗手池</div>
+          </div>
+          <div class="muyu s-s">
+            <div class="dianqi-name">洗澡间</div>
+          </div>
+          <div class="dunbian s-s">
+            <div class="dianqi-name">蹲便</div>
+          </div>
+          <div class="xiyiji s-s">
+            <div class="dianqi-name">洗衣机、烘干机</div>
+          </div>
+          <div class="guizi s-s">
+            <div class="dianqi-name">柜子</div>
           </div>
           <!-- 用电用水 -->
           <div class="dianqi-list s-s" v-show="showDianqiList">
@@ -491,7 +681,8 @@ export default {
       showDianqiList: false,
       showWaterList: false,
       switchTable: false,
-      xiyijiAlignleft: false // 阳台洗衣机放哪边
+      xiyijiAlignleft: false, // 阳台洗衣机放哪边
+      weishengjianType: 1
     }
   },
   watch: {
