@@ -280,7 +280,9 @@
           <div class="chuanghu show-border s-s" style="width: 420px;top: 120px;left: 50px;"></div>
           <div class="chuanghu show-border s-s" style="height: 70px;top: 50px;left: 450px;"></div>
           <div class="chuanghu show-border s-s" style="height: 70px;top: 50px;left: -20px;"></div>
+          <div class="chuanghu show-border s-s" style="width: 83px;top: -20px;left: 295px;"></div>
           <!--  -->
+          <div class="chuangtai"></div>
           <div class="yangtaiguizi s-s"></div>
           <div class="xiyiji s-s">
             <div class="dianqi-name">洗衣机 、 烘干机</div>
