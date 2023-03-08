@@ -1,27 +1,29 @@
 <template>
-  <div id="app" style="padding: 10px;">
-    <div style="margin: -10px">
+  <div id="app" style="padding: 20px 50px; width: 930px;">
+    <div>
       <!-- 房屋设计 -->
       <div>
         <span>单位：cm</span>
         <br />
         <span>注：默认墙体厚度20</span>
         <br />
-        <span>显示用电器件</span>
-        <el-switch
-          v-model="showDianqiList"
-          active-color="red">
-        </el-switch>
-        <span>显示用水器件</span>
-        <el-switch
-          v-model="showWaterList"
-          active-color="blue">
-        </el-switch>
-        <div>
-          备注：<br/>
-          1、阳台到沙发和书桌中间的位置怎么设计；<br/>
-          2、阳台的洗衣机摆放位置;<br/>
-          3、阳台操作台怎么设计，比如洗手池（一定要吗），做个架子？，下面做个拖把清洗槽？
+        <h3>房屋布局控制</h3>
+        <div style="padding-left: 20px">
+          <span>显示用电器件</span>
+          <el-switch
+            v-model="showDianqiList"
+            active-color="red">
+          </el-switch><br/>
+          <span>显示用水器件</span>
+          <el-switch
+            v-model="showWaterList"
+            active-color="blue">
+          </el-switch><br/>
+          <span>阳台洗衣机靠左</span>
+          <el-switch
+            v-model="xiyijiAlignleft"
+            active-color="green">
+          </el-switch><br/>
         </div>
       </div>
       <!-- 整个房子 -->
@@ -55,8 +57,8 @@
         </el-popover>
         <div class="normal-wall show-border s-s" style="width: 178px;top:70px;left: 10px;"></div>
         <div class="w v s-s" style="width: 80px;top:920px;border-right: none"></div>
-        <div class="normal-wall show-border s-s" style="height: 118px;top:930px;left: 50px;"></div>
-        <div class="normal-wall show-border s-s" style="height: 118px;top:930px;left: 520px;"></div>
+        <div class="normal-wall show-border s-s" style="height: 48px;top:930px;left: 50px;"></div>
+        <div class="normal-wall show-border s-s" style="height: 48px;top:930px;left: 520px;"></div>
         <div class="w s-s" style="width: 105px;top:80px;top:920px;left: 515px;"></div>
         <div class="w s-s" style="width: 65px;top:80px;top:920px;left: 620px;"></div>
         <div class="normal-wall show-border s-s" style="width: 63px;top:910px;left: 875px;"></div>
@@ -66,7 +68,7 @@
         <div class="normal-wall show-border s-s" style="width: 228px;top:240px;left: 630px;"></div>
         <!-- 书房主卧分割墙 -->
         <div class="w s-s" style="height: 300px;top:80px;top:620px;left: 620px;"></div>
-        <div class="w s-s" style="width: 490px;top:1060px;left: 40px;"></div>
+        <!-- <div class="w s-s" style="width: 490px;top:1060px;left: 40px;"></div> -->
         <!-- 横梁 -->
         <div class="bridge s-s show-border" style="width: 168px;left: 10px; top: 240px;"></div>
         <div class="bridge s-s show-border" style="height: 550px;left: 340px; top: 500px;"></div>
@@ -264,9 +266,16 @@
           <div class="mark-line h s-s" style="height: 70px;top:20px;left: 216px"></div>
         </div>
         <!-- 阳台 -->
-        <div class="yangtai">
+        <div class="yangtai" :class="xiyijiAlignleft ? 'align-left' : 'align-right'">
+          
+          <div class="normal-wall show-border s-s" style="width: 47px;top: -20px;left: 247px;"></div>
+          <div class="add-wall normal-wall show-border s-s" style="width: 55px;top: -20px;left: 379px;"></div>
+          <div class="normal-wall show-border s-s" style="width: 90px;top: 120px;left: -40px;"></div>
+          <div class="chuanghu show-border s-s" style="width: 420px;top: 120px;left: 50px;"></div>
+          <div class="chuanghu show-border s-s" style="height: 70px;top: 50px;left: 450px;"></div>
+          <div class="chuanghu show-border s-s" style="height: 70px;top: 50px;left: -20px;"></div>
           <!--  -->
-          <div class="yanggaiguizi s-s"></div>
+          <div class="yangtaiguizi s-s"></div>
           <div class="xiyiji s-s">
             <div class="dianqi-name">洗衣机 、 烘干机</div>
             <el-popover
@@ -445,6 +454,20 @@
         <div class="fzx fzx-x" style="width: 100%;top: 610px;"></div>
         <div class="fzx fzx-y" style="height: 100%;"></div>
       </div>
+      <!-- 疑问笔记 -->
+      <div>
+        <h3>问题备注</h3>
+        - 阳台到沙发和书桌中间的位置怎么设计；<br/>
+        - 阳台的洗衣机摆放位置（靠窗还是靠客厅）;<br/>
+        - 阳台操作台怎么设计，比如洗手池（一定要吗），做个架子？，下面做个拖把清洗槽？<br/>
+        - 阳台中间柱子如果是承重墙，解决方案：把洗衣机挪走<br/>
+        <div style="padding-left: 20px">
+          1：洗衣机靠阳台西边（被隔开的小门就能显得大点）<br/>
+          2：洗衣机烘干机放到洗手间<br/>
+          3：洗衣机烘干机放到立式空调位置<br/>
+          4：洗衣机烘干机放到书架位置<br/>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -458,6 +481,7 @@ export default {
       showDianqiList: false,
       showWaterList: false,
       switchTable: false,
+      xiyijiAlignleft: false // 阳台洗衣机放哪边
     }
   },
   watch: {
@@ -479,347 +503,30 @@ export default {
     },
     setBoxSize() {
       Array.prototype.forEach.call(
-      document.getElementsByClassName("s-s"),
-      element => {
-        const borderLength = element.className.indexOf('show-border') > -1 ? 2 : 0
-        const clientWidth = element.clientWidth + borderLength
-        const clientHeight = element.clientHeight + borderLength
-        const widthHeightArray = [clientWidth, clientHeight];
-        element.setAttribute(
-          "datasize",
-          widthHeightArray.filter(num => num > 1).join("*")
-        );
-      }
-    );
-    }
+        document.getElementsByClassName("s-s"),
+        element => {
+          const borderLength = element.className.indexOf('show-border') > -1 ? 2 : 0
+          const clientWidth = element.clientWidth + borderLength
+          const clientHeight = element.clientHeight + borderLength
+          const widthHeightArray = [clientWidth, clientHeight];
+          element.setAttribute(
+            "datasize",
+            widthHeightArray.filter(num => num > 1).join("*")
+          );
+        }
+      );
+    },
+    // switchAlign() {
+    //   console.log(11)
+    //   this.xiyijiAlignleft = !this.xiyijiAlignleft
+    // }
   }
 };
 </script>
 
 <style lang="less" scoped>
 @import './style/common.less';
+@import './app.less';
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-}
 
-/* 门 */
-.d {
-  width: 7px;
-  height: 7px;
-  background-color: #aaa;
-  position: absolute;
-}
-/* 房屋 */
-.home {
-  margin-top: 20px;
-  width: 930px;
-  height: 1060px;
-  border: 1px solid #eee;
-  position: relative;
-}
-/* 厨房 */
-.kitchen {
-  width: 240px;
-  height: 270px;
-  position: absolute;
-  left: 190px;
-  .freezer {
-    width: 92px;
-    height: 64px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 13px;
-    bottom: 11px;
-  }
-  .paiyanguandao { // 排烟管道
-    width: 45px;
-    height: 45px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-  }
-  .youyanji { // 油烟机
-    width: 90px;
-    height: 43px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 60px;
-    top: 12px;
-  }
-  .ranqizao {
-    width: 60px;
-    height: 38px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 75px;
-    top: 14px;
-  }
-  .xiwanji {
-    width: 60px;
-    height: 60px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 169px;
-    top: 61px;
-  }
-  .xishouchi {
-    width: 45px;
-    height: 75px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 175px;
-    top: 124px;
-  }
-  .chuwujia {
-    width: 54px;
-    height: 36px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 112px;
-    top: 202px;
-  }
-
-}
-// 走廊
-.zoulang {
-  width: 170px;
-  height: 150px;
-  position: absolute;
-  left: 10px;
-  top: 90px;
-  .xuanguan {
-    width: 40px;
-    height: 150px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-  }
-  .men {
-    transform: rotateY(180deg);
-    top: -104px;
-    left: 69px;
-  }
-}
-.dating {
-  width: 330px;
-  height: 650px;
-  position: absolute;
-  left: 10px;
-  top: 260px;
-  .bigui {
-    width: 40px;
-    height: 650px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-  }
-  .canzhuo {
-    width: 140px;
-    height: 70px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 190px;
-    top: 95px;
-  }
-  .dianshi-loukong {
-    width: 40px;
-    height: 180px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 0px;
-    top: 380px;
-  }
-  .dianshi {
-    width: 10px;
-    height: 150px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 3px;
-    top: 395px;
-  }
-  .dianshi-cegui {
-    width: 40px;
-    height: 40px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 0px;
-    top: 560px;
-  }
-  .shafa {
-    width: 90px;
-    height: 225px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 260px;
-    top: 360px;
-    &.open {
-      left: 225px;
-    }
-  }
-  .kongtiao {
-    width: 43px;
-    height: 43px;
-    border: 1px solid #aaa;
-    border-radius: 50%;
-    position: absolute;
-    left: 2px;
-    top: 604px;
-  }
-}
-.yangtai {
-  width: 450px;
-  height: 120px;
-  position: absolute;
-  left: 69px;
-  top: 930px;
-  .yanggaiguizi {
-    width: 70px;
-    height: 132px;
-    border: 1px solid #aaa;
-    border-top-left-radius: 19px;
-    position: absolute;
-    top: -20px;
-    right: 0px;
-  }
-  .xiyiji {
-    width: 63px;
-    height: 60px;
-    border: 1px solid #aaa;
-    position: absolute;
-    top: 50px;
-    right: 3px;
-  }
-}
-.shufang {
-  width: 250px;
-  height: 300px;
-  position: absolute;
-  left: 360px;
-  top: 610px;
-  .shujia {
-    width: 40px;
-    height: 300px;
-    border: 1px solid #aaa;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-  }
-  .zhuozi {
-    width: 90px;
-    height: 225px;
-    border: 1px solid #aaa;
-    position: absolute;
-    left: 0px;
-    top: 10px;
-    &.open {
-      left: 40px;
-    }
-  }
-}
-.zhuwo {
-  width: 290px;
-  height: 365px;
-  position: absolute;
-  left: 630px;
-  top: 555px;
-  // background-color: #eee;
-  .yigui {
-    width: 180px;
-    height: 65px;
-    border: 1px solid #aaa;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-  }
-  .men {
-    transform: rotateX(180deg);
-    top: 53px;
-    left: 0px;
-  }
-}
-.ciwo {
-  width: 300px;
-  height: 295px;
-  position: absolute;
-  left: 620px;
-  top: 260px;
-  // background-color: #eee;
-  .yigui {
-    width: 180px;
-    height: 65px;
-    border: 1px solid #aaa;
-    position: absolute;
-    bottom: 0px;
-    right: 0;
-  }
-  .men {
-    top: 143px;
-    left: 10px;
-  }
-}
-/* 卫生间 */
-.washroom {
-  width: 270px;
-  height: 240px;
-  position: absolute;
-  left: 350px;
-  top: 250px;
-  .matong{
-    width: 70px;
-    height: 40px;
-    border: 1px solid #aaa;
-    position: absolute;
-    top: 39px;
-    left: 10px;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-  }
-  .xishouchi{
-    width: 50px;
-    height: 120px;
-    border: 1px solid #aaa;
-    position: absolute;
-    top: 119px;
-    left: 10px;
-  }
-  .muyu{
-    width: 110px;
-    height: 94px;
-    border: 1px solid #aaa;
-    position: absolute;
-    top: 10px;
-    left: 150px;
-  }
-  .dunbian{
-    width: 73px;
-    height: 45px;
-    border: 1px solid #aaa;
-    position: absolute;
-    top: 130px;
-    right: 10px;
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
-  }
-  .men1 {
-    transform: rotateY(180deg);
-    width: 70px;
-    height: 70px;
-    top: 51px;
-    left: 67px;
-  }
-  .men2 {
-    // transform: rotateX(180deg);
-    // transform: rotateY(180deg);
-    transform: rotate3d(-1, 1, 0, 180deg);
-    width: 70px;
-    height: 70px;
-    top: 168px;
-    left: 142px;
-  }
-}
 </style>
