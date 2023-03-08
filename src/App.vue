@@ -375,6 +375,9 @@
         </div>
         <!-- 洗手间 -->
         <div class="washroom">
+          <div class="xiashuiguan s-s">
+            <div class="dianqi-name">污水管</div>
+          </div>
           <!-- 厚墙 -->
           <div
             class="w s-s"
@@ -390,9 +393,15 @@
           <img src="../public/common/men.jpg" alt="" class="men men1"/>
           <img src="../public/common/men.jpg" alt="" class="men men2"/>
           <div class="matong s-s"></div>
-          <div class="xishouchi s-s"></div>
-          <div class="muyu s-s"></div>
-          <div class="dunbian s-s"></div>
+          <div class="xishouchi s-s">
+            <div class="dianqi-name">洗手池</div>
+          </div>
+          <div class="muyu s-s">
+            <div class="dianqi-name">洗澡间</div>
+          </div>
+          <div class="dunbian s-s">
+            <div class="dianqi-name">蹲便</div>
+          </div>
           <!-- 用电用水 -->
           <div class="dianqi-list s-s" v-show="showDianqiList">
             洗手间用电器件：
@@ -457,6 +466,7 @@
       <!-- 疑问笔记 -->
       <div>
         <h3>问题备注</h3>
+        - 洗拖把的地方放哪里？<br/>
         - 阳台到沙发和书桌中间的位置怎么设计；<br/>
         - 阳台的洗衣机摆放位置（靠窗还是靠客厅）;<br/>
         - 阳台操作台怎么设计，比如洗手池（一定要吗），做个架子？，下面做个拖把清洗槽？<br/>
