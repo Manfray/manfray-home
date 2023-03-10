@@ -280,7 +280,7 @@
         <!-- 阳台 -->
         <div class="yangtai" :class="xiyijiAlignleft ? 'align-left' : 'align-right'">
           
-          <div class="normal-wall show-border s-s" style="width: 47px;top: -20px;left: 247px;">
+          <div class="normal-wall show-border s-s" style="width: 47px;top: -20px;left: 247px; background-color: #ccc;">
             <div class="dianqi-name">承重墙</div>
           </div>
           <div class="add-wall normal-wall show-border s-s" style="width: 19px;top: -20px;left: 416px;"></div>
@@ -362,7 +362,9 @@
         <!-- 主卧 -->
         <div class="zhuwo">
           <!--  -->
-          <div class="yigui s-s"></div>
+          <div class="yigui s-s">
+            <div class="dianqi-name">衣柜、一门到顶</div>
+          </div>
           <div class="dianqi-list s-s" v-show="showDianqiList">
             主卧用电器件：
             <div>投影仪</div>
@@ -380,7 +382,9 @@
         <!-- 次卧 -->
         <div class="ciwo">
           <!--  -->
-          <div class="yigui s-s"></div>
+          <div class="yigui s-s">
+            <div class="dianqi-name">衣柜、一门到顶</div>
+          </div>
           <div class="dianqi-list s-s" v-show="showDianqiList">
             次卧用电器件：
             <div>开关</div>
@@ -413,9 +417,11 @@
 
           <img src="../public/common/men.jpg" alt="" class="men men1"/>
           <img src="../public/common/men.jpg" alt="" class="men men2"/>
-          <div class="matong s-s"></div>
+          <div class="matong s-s">
+            <div class="dianqi-name">马桶</div>
+          </div>
           <div class="xishouchi s-s">
-            <div class="dianqi-name">洗手池</div>
+            <div class="dianqi-name">洗手台</div>
           </div>
           <div class="muyu s-s">
             <div class="dianqi-name">洗澡间</div>
