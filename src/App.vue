@@ -3,6 +3,8 @@
     <div>
       <!-- 房屋设计 -->
       <div>
+        <span>注：图中数字仅作设计参考，具体尺寸以现场测量为准，适当调整</span>
+        <br />
         <span>单位：cm</span>
         <br />
         <span>注：默认墙体厚度20</span>
@@ -30,6 +32,10 @@
             <el-radio :label="2">B</el-radio>
             <el-radio :label="3">C</el-radio>
           </el-radio-group><br/>
+          <span>展示办公桌及沙发</span>
+          <el-switch
+            v-model="showShafa">
+          </el-switch><br/><br/>
         </div>
       </div>
       <!-- 整个房子 -->
@@ -236,7 +242,7 @@
           <div class="dianshi-cegui s-s">
             <div class="dianqi-name">侧柜</div>
           </div>
-          <div class="shafa s-s" :class="switchTable ? 'open' : 'close'">
+          <div v-show="showShafa" class="shafa s-s" :class="switchTable ? 'open' : 'close'">
             <div class="dianqi-name">沙发</div>
           </div>
           <!-- 空调 -->
@@ -274,16 +280,22 @@
         <!-- 阳台 -->
         <div class="yangtai" :class="xiyijiAlignleft ? 'align-left' : 'align-right'">
           
-          <div class="normal-wall show-border s-s" style="width: 47px;top: -20px;left: 247px;"></div>
-          <div class="add-wall normal-wall show-border s-s" style="width: 55px;top: -20px;left: 379px;"></div>
+          <div class="normal-wall show-border s-s" style="width: 47px;top: -20px;left: 247px;">
+            <div class="dianqi-name">承重墙</div>
+          </div>
+          <div class="add-wall normal-wall show-border s-s" style="width: 19px;top: -20px;left: 416px;"></div>
           <div class="normal-wall show-border s-s" style="width: 90px;top: 120px;left: -40px;"></div>
           <div class="chuanghu show-border s-s" style="width: 420px;top: 120px;left: 50px;"></div>
           <div class="chuanghu show-border s-s" style="height: 70px;top: 50px;left: 450px;"></div>
           <div class="chuanghu show-border s-s" style="height: 70px;top: 50px;left: -20px;"></div>
-          <div class="chuanghu show-border s-s" style="width: 83px;top: -20px;left: 295px;"></div>
+          <div class="chuanghu show-border s-s" style="width: 120px;top: -20px;left: 295px;">
+            <div class="dianqi-name"> 窗台、拱顶、高105</div>
+          </div>
           <!--  -->
-          <div class="chuangtai"></div>
-          <div class="yangtaiguizi s-s"></div>
+          <!-- <div class="chuangtai"></div> -->
+          <div class="yangtaiguizi s-s">
+            <div class="dianqi-name">洗手台</div>
+          </div>
           <div class="xiyiji s-s">
             <div class="dianqi-name">洗衣机 、 烘干机</div>
             <el-popover
@@ -318,7 +330,7 @@
         <!-- 书房 -->
         <div class="shufang">
           <!--  -->
-          <div class="zhuozi s-s" :class="switchTable ? 'open' : 'close'">
+          <div v-show="showShafa" class="zhuozi s-s" :class="switchTable ? 'open' : 'close'">
             <div class="dianqi-name">桌子</div>
             切换
             <el-switch
@@ -685,7 +697,8 @@ export default {
       showWaterList: false,
       switchTable: false,
       xiyijiAlignleft: false, // 阳台洗衣机放哪边
-      weishengjianType: 1
+      weishengjianType: 1,
+      showShafa: false
     }
   },
   watch: {
