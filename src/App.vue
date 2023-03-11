@@ -368,6 +368,18 @@
           <div class="nuanqipian s-s show-border">
             <div class="dianqi-name">热</div>
           </div>
+          <el-popover
+            placement="bottom"
+            title="装修参考"
+            width="300"
+            trigger="click">
+            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+                <img :src="`./shujia/${item}.jpg`" alt="" style="height: 100%">
+              </el-carousel-item>
+            </el-carousel>
+            <i slot="reference" class="magic el-icon-magic-stick" style="top: 138px;left: 162px;"></i>
+          </el-popover>
           <div class="dianqi-list s-s" v-show="showDianqiList">
             书房用电器件：
             <div>电脑</div>
