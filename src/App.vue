@@ -35,7 +35,9 @@
           <span>展示办公桌及沙发</span>
           <el-switch
             v-model="showShafa">
-          </el-switch><br/><br/>
+          </el-switch><br/>
+          南墙平视图开关:是否展示:<el-switch  v-model="showSouthPingshi"></el-switch> 北向<el-switch  v-model="rotateDir"></el-switch>南向<br>
+          独立书房设计：<el-switch  v-model="showThreeRoom"></el-switch> <br>
         </div>
       </div>
       <!-- 整个房子 -->
@@ -109,7 +111,9 @@
           <div class="l s-s" style="height: 40px; left: 168px; top: 200px"></div>
           <div class="l s-s" style="height: 60px; left: 110px; top: 200px"></div>
           <!-- 冰箱 -->
-          <div class="freezer s-s"></div>
+          <div class="freezer s-s">
+            <div class="dianqi-name">冰箱</div>
+          </div>
           <!-- 排烟管道 -->
           <div class="paiyanguandao s-s">
             <div class="dianqi-name">排烟管道</div>
@@ -227,19 +231,22 @@
         <!-- 大厅 -->
         <div class="dating">
           <!-- 壁柜 -->
-          <div class="bigui s-s"></div>
+          <div class="bigui s-s show-border"></div>
           <!-- 餐桌 -->
           <div class="canzhuo s-s">
             <div class="dianqi-name">餐桌</div>
           </div>
+          <div class="nuanqipian s-s show-border">
+            <div class="dianqi-name">热</div>
+          </div>
           <!-- 电视65寸：144*81 -->
-          <div class="dianshi-loukong s-s">
+          <div class="dianshi-loukong s-s show-border">
             <div class="dianqi-name">电视柜</div>
           </div>
-          <div class="dianshi s-s">
+          <div class="dianshi s-s show-border">
             <div class="dianqi-name">电视</div>
           </div>
-          <div class="dianshi-cegui s-s">
+          <div class="dianshi-cegui s-s show-border">
             <div class="dianqi-name">侧柜</div>
           </div>
           <div v-show="showShafa" class="shafa s-s" :class="switchTable ? 'open' : 'close'">
@@ -280,21 +287,23 @@
         <!-- 阳台 -->
         <div class="yangtai" :class="xiyijiAlignleft ? 'align-left' : 'align-right'">
           
+          <div class="nuanqipian s-s show-border">
+            <div class="dianqi-name">暖气</div>
+          </div>
           <div class="normal-wall show-border s-s" style="width: 47px;top: -20px;left: 247px; background-color: #ccc;">
             <div class="dianqi-name">承重墙</div>
           </div>
-          <div class="add-wall normal-wall show-border s-s" style="width: 19px;top: -20px;left: 416px;"></div>
+          <div class="add-wall normal-wall show-border s-s" style="width: 54px;top: -20px;left: 380px;"></div>
           <div class="normal-wall show-border s-s" style="width: 90px;top: 120px;left: -40px;"></div>
           <div class="chuanghu show-border s-s" style="width: 420px;top: 120px;left: 50px;"></div>
           <div class="chuanghu show-border s-s" style="height: 70px;top: 50px;left: 450px;"></div>
           <div class="chuanghu show-border s-s" style="height: 70px;top: 50px;left: -20px;"></div>
-          <div class="chuanghu show-border s-s" style="width: 120px;top: -20px;left: 295px;">
+          <div class="chuanghu show-border s-s" style="width: 84px;top: -20px;left: 295px;">
             <div class="dianqi-name"> 窗台、拱顶、高105</div>
           </div>
           <!--  -->
           <!-- <div class="chuangtai"></div> -->
           <div class="yangtaiguizi s-s">
-            <div class="dianqi-name">洗手台</div>
           </div>
           <div class="xiyiji s-s">
             <div class="dianqi-name">洗衣机 、 烘干机</div>
@@ -338,8 +347,26 @@
               active-color="yellow">
             </el-switch>
           </div>
-          <div class="shujia s-s">
+          <div class="shujiadi s-s show-border">
+            <div class="dianqi-name">书架底</div>
+          </div>
+          <div class="shujia s-s show-border">
             <div class="dianqi-name">书架</div>
+          </div>
+          <div class="shuzhuo s-s show-border">
+            <div class="dianqi-name">写字桌</div>
+          </div>
+          <div v-show="showThreeRoom" class="w-thin s-s show-border" style="width: 90px;left: 0px;top: 0px;"></div>
+          <div v-show="showThreeRoom" class="w-thin s-s show-border" style="width: 158px;left: 91px;top: 0px;"></div>
+          <div v-show="showThreeRoom" class="pinjiezhuo s-s show-border">
+            <div class="dianqi-name">悬空拼接桌</div>
+          </div>
+          <div v-show="showThreeRoom" class="chuang s-s show-border">
+            <div class="dianqi-name">床</div>
+          </div>
+          <img v-show="showThreeRoom" src="../public/common/men.jpg" alt="" class="men">
+          <div class="nuanqipian s-s show-border">
+            <div class="dianqi-name">热</div>
           </div>
           <div class="dianqi-list s-s" v-show="showDianqiList">
             书房用电器件：
@@ -673,6 +700,49 @@
         <div class="fzx fzx-x" style="width: 100%;top: 555px;"></div>
         <div class="fzx fzx-x" style="width: 100%;top: 610px;"></div>
         <div class="fzx fzx-y" style="height: 100%;"></div>
+        <!-- 房屋最下面平面图 -->
+        <div v-show="showSouthPingshi" class="home-south pingshi" :class="rotateDir ? 'south' : ''">
+          <div class="hengliang s-s show-border">
+            <div class="dianqi-name">横梁</div>
+          </div>
+          <!-- 壁柜 -->
+          <div v-show="rotateDir" class="bigui s-s show-border">
+            <div class="dianqi-name">壁柜</div>
+          </div>
+          <div class="shujiadi s-s show-border">
+            <div class="dianqi-name">书架底</div>
+          </div>
+          <div class="shujia s-s show-border">
+            <div class="dianqi-name">书架</div>
+          </div>
+          <!-- 书房暖气片，考虑后期会隔成三房，此房不用安装太多暖气片，位置不与窗户重合，是方便后面做成门 -->
+          <div v-show="rotateDir" class="nuanqipian s-s show-border">
+            <div class="dianqi-name">暖气片</div>
+          </div>
+
+          <div v-show="rotateDir" class="shujiaqiang s-s show-border"></div>
+          <div v-show="!rotateDir" class="yangtaizuoqiang s-s show-border"></div>
+          <div v-show="!rotateDir" class="yangtaiyouqiang s-s show-border"></div>
+          <div class="gongmen1 s-s">
+            <div class="dianqi-name">大拱门，圆弧半径≈40</div>
+          </div>
+          <div class="chuanghu2 s-s">
+            <div class="dianqi-name">小窗户，圆弧半径≈40</div>
+          </div>
+          <div v-show="!rotateDir" class="yangtaigui s-s">
+            <div class="dianqi-name">顶部柜子</div>
+          </div>
+          <div v-show="!rotateDir" class="hongganjiguizi s-s">
+            <div class="dianqi-name">烘干机柜子</div>
+          </div>
+          <div v-show="!rotateDir" class="xiyijizhuomian s-s">
+            <div class="dianqi-name">洗衣机+顶部台面</div>
+          </div>
+          <!-- 标线 -->
+          <div v-show="!rotateDir" class="mark-line h s-s" style="height: 103px;top: 164px;left: 386px;"></div>
+          <div v-show="!rotateDir" class="mark-line h s-s" style="height: 33px;top: 0px;left: 322px;"></div>
+          <div v-show="!rotateDir" class="mark-line h s-s" style="height: 233px;top: 34px;left: 322px;"></div>
+        </div>
       </div>
       <!-- 疑问笔记 -->
       <div>
@@ -704,7 +774,10 @@ export default {
       switchTable: false,
       xiyijiAlignleft: false, // 阳台洗衣机放哪边
       weishengjianType: 1,
-      showShafa: false
+      showShafa: false,
+      showSouthPingshi: false,
+      rotateDir: false,
+      showThreeRoom: false // 展示三房设计，独立书房
     }
   },
   watch: {
@@ -728,13 +801,13 @@ export default {
       Array.prototype.forEach.call(
         document.getElementsByClassName("s-s"),
         element => {
-          const borderLength = element.className.indexOf('show-border') > -1 ? 2 : 0
+          const borderLength = (element.className.indexOf('show-border') > -1 | element.className.indexOf('mark-line') > -1) ? 2 : 0
           const clientWidth = element.clientWidth + borderLength
           const clientHeight = element.clientHeight + borderLength
           const widthHeightArray = [clientWidth, clientHeight];
           element.setAttribute(
             "datasize",
-            widthHeightArray.filter(num => num > 1).join("*")
+            widthHeightArray.filter(num => num > 10).join("*")
           );
         }
       );

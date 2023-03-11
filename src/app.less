@@ -19,6 +19,126 @@
   border: 1px solid #eee;
   position: relative;
 }
+.home-south{
+    width: 911px;
+    height: 270px;
+    position: absolute;
+    bottom: 140px;
+    left: 9px;
+    z-index: 119;
+    transform-origin: bottom;
+    transform: rotateX(0deg);
+    &.south{
+      transform: rotateX(180deg);
+    }
+    .hengliang {
+        width: 100%;
+        height: 33px;
+        position: absolute;
+        border: 1px solid #aaa;
+        top: 0;
+        border-bottom-style: dashed;
+    }
+    .bigui {
+      width: 38px;
+      height: 268px;
+      position: absolute;
+      border: 1px solid #aaa;
+      top: 0;
+    }
+    .shujiadi {
+      width: 58px;
+      height: 48px;
+      position: absolute;
+      border: 1px solid #aaa;
+      bottom: 0;
+      left: 540px;
+    }
+    .shujia {
+      width: 28px;
+      height: 220px;
+      position: absolute;
+      border: 1px solid #aaa;
+      top: 0;
+      left: 570px;
+    }
+    .nuanqipian {
+      width: 48px;
+      height: 58px;
+      position: absolute;
+      border: 1px solid #333;
+      left: 464px;
+      bottom: 20px;
+    }
+    .shujiaqiang {
+      width: 18px;
+      height: 268px;
+      position: absolute;
+      border: 1px solid #aaa;
+      top: 0;
+      left: 600px;
+    }
+    .yangtaizuoqiang {
+        width: 18px;
+        height: 268px;
+        position: absolute;
+        border: 1px solid #aaa;
+        top: 0;
+        left: 41px;
+    }
+    .yangtaiyouqiang {
+        width: 18px;
+        height: 268px;
+        position: absolute;
+        border: 1px solid #aaa;
+        top: 0;
+        left: 511px;
+    }
+    .gongmen1 {
+        width: 235px;
+        height: 235px;
+        position: absolute;
+        border: 1px solid #333;
+        bottom: 0;
+        left: 71px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+    .chuanghu2 {
+        width: 84px;
+        height: 130px;
+        position: absolute;
+        border: 1px solid #333;
+        bottom: 105px;
+        left: 355px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+    .yangtaigui {
+        width: 65px;
+        height: 88px;
+        position: absolute;
+        border: 1px solid #333;
+        bottom: 180px;
+        left: 445px;
+    }
+    .hongganjiguizi {
+        width: 65px;
+        height: 80px;
+        position: absolute;
+        border: 1px solid #333;
+        bottom: 100px;
+        left: 445px;
+    }
+    .xiyijizhuomian {
+        width: 65px;
+        height: 100px;
+        position: absolute;
+        border: 1px solid #333;
+        bottom: 0px;
+        left: 445px;
+    }
+}
 /* 厨房 */
 .kitchen {
   width: 240px;
@@ -113,12 +233,20 @@
   left: 10px;
   top: 260px;
   .bigui {
-    width: 40px;
+    width: 38px;
     height: 650px;
     border: 1px solid #aaa;
     position: absolute;
     left: 0px;
     top: 0px;
+  }
+  .nuanqipian {
+    width: 4px;
+    height: 38px;
+    border: 1px solid #aaa;
+    position: absolute;
+    right: 4px;
+    top: 29px;
   }
   .canzhuo {
     width: 140px;
@@ -129,7 +257,7 @@
     top: 95px;
   }
   .dianshi-loukong {
-    width: 40px;
+    width: 38px;
     height: 180px;
     border: 1px solid #aaa;
     position: absolute;
@@ -137,7 +265,7 @@
     top: 380px;
   }
   .dianshi {
-    width: 10px;
+    width: 8px;
     height: 150px;
     border: 1px solid #aaa;
     position: absolute;
@@ -145,7 +273,7 @@
     top: 395px;
   }
   .dianshi-cegui {
-    width: 40px;
+    width: 38px;
     height: 40px;
     border: 1px solid #aaa;
     position: absolute;
@@ -180,9 +308,17 @@
   position: absolute;
   left: 69px;
   top: 930px;
+  .nuanqipian {
+    width: 4px;
+    height: 38px;
+    border: 1px solid #aaa;
+    position: absolute;
+    top: 10px;
+    left: 4px;
+  }
   .yangtaiguizi {
-    width: 70px;
-    height: 112px;
+    width: 65px;
+    height: 119px;
     border: 1px solid #aaa;
     // border-top-left-radius: 19px;
     position: absolute;
@@ -194,8 +330,8 @@
     height: 60px;
     border: 1px solid #aaa;
     position: absolute;
-    top: 50px;
-    right: 3px;
+    top: 1px;
+    right: 2px;
   }
   .chuangtai {
     width: 91px;
@@ -232,13 +368,59 @@
   position: absolute;
   left: 360px;
   top: 610px;
-  .shujia {
-    width: 40px;
-    height: 300px;
+  .shujiadi {
+    width: 58px;
+    height: 286px;
     border: 1px solid #aaa;
     position: absolute;
-    top: 0px;
+    top: 12px;
     right: 0px;
+  }
+  .shujia {
+    width: 28px;
+    height: 286px;
+    border: 1px solid #aaa;
+    position: absolute;
+    top: 12px;
+    right: 0px;
+  }
+  .shuzhuo {
+    width: 118px;
+    height: 58px;
+    border: 1px solid #aaa;
+    position: absolute;
+    bottom: 0px;
+  }
+  .pinjiezhuo {
+    width: 99px;
+    height: 58px;
+    border: 1px solid #aaa;
+    position: absolute;
+    bottom: 0px;
+    left: 120px;
+  }
+  .chuang {
+    width: 88px;
+    height: 220px;
+    border: 1px solid #aaa;
+    position: absolute;
+    top: 12px;
+    right: 60px;
+  }
+  .nuanqipian {
+    width: 48px;
+    height: 4px;
+    border: 1px solid #aaa;
+    position: absolute;
+    bottom: 4px;
+    right: 70px;
+  }
+  .men {
+    transform: rotateX(180deg);
+    top: 0px;
+    left: 3px;
+    width: 85px;
+    height: 84px;
   }
   .zhuozi {
     width: 90px;

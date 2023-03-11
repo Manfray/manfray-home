@@ -134,14 +134,28 @@ div {
   &.v {
     border-top-color: #fff;
     border-bottom-color: #fff;
-    border-left-width: 3px;
-    border-right-width: 3px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    margin-left: -2px;
+    margin-right: -2px;
   }
   &.h {
     border-left-color: #fff;
     border-right-color: #fff;
-    border-top-width: 3px;
-    border-bottom-width: 3px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    padding-top: -2px;
+    padding-bottom: -2px;
+  }
+}
+.pingshi .mark-line {
+  &.v {
+    border-top-color: #eee;
+    border-bottom-color: #eee;
+  }
+  &.h {
+    border-left-color: #eee;
+    border-right-color: #eee;
   }
 }
 .fzx {
@@ -163,4 +177,7 @@ div {
   left: 0;
   transform: rotate(0deg);
   opacity: 30%;
+}
+.pingshi {
+  background-color: #efefef;
 }
