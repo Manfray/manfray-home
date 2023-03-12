@@ -295,9 +295,9 @@
           </div>
           <div class="add-wall normal-wall show-border s-s" style="width: 54px;top: -20px;left: 380px;"></div>
           <div class="normal-wall show-border s-s" style="width: 90px;top: 120px;left: -40px;"></div>
-          <div class="chuanghu show-border s-s" style="width: 420px;top: 120px;left: 50px;"></div>
-          <div class="chuanghu show-border s-s" style="height: 70px;top: 50px;left: 450px;"></div>
-          <div class="chuanghu show-border s-s" style="height: 70px;top: 50px;left: -20px;"></div>
+          <div class="chuanghu show-border s-s" style="width: 418px;top: 120px;left: 50px;"></div>
+          <div class="chuanghu show-border s-s" style="height: 68px;top: 50px;left: 451px;"></div>
+          <div class="chuanghu show-border s-s" style="height: 68px;top: 50px;left: -19px;"></div>
           <div class="chuanghu show-border s-s" style="width: 84px;top: -20px;left: 295px;">
             <div class="dianqi-name"> 窗台、拱顶、高105</div>
           </div>
@@ -721,10 +721,10 @@
           <div v-show="rotateDir" class="bigui s-s show-border">
             <div class="dianqi-name">壁柜</div>
           </div>
-          <div class="shujiadi s-s show-border">
+          <div v-show="rotateDir" class="shujiadi s-s show-border">
             <div class="dianqi-name">书架底</div>
           </div>
-          <div class="shujia s-s show-border">
+          <div v-show="rotateDir" class="shujia s-s show-border">
             <div class="dianqi-name">书架</div>
           </div>
           <!-- 书房暖气片，考虑后期会隔成三房，此房不用安装太多暖气片，位置不与窗户重合，是方便后面做成门 -->
@@ -798,6 +798,12 @@ export default {
     },
     switchTable(val) {
       this.reRenderBoxSize(val)
+    },
+    showThreeRoom(val) {
+      val && this.reRenderBoxSize(val)
+    },
+    showSouthPingshi(val) {
+      val && this.reRenderBoxSize(val)
     }
   },
   mounted() {
