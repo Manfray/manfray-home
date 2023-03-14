@@ -293,12 +293,11 @@
           <div class="normal-wall show-border s-s" style="width: 47px;top: -20px;left: 247px; background-color: #ccc;">
             <div class="dianqi-name">承重墙</div>
           </div>
-          <div class="add-wall normal-wall show-border s-s" style="width: 54px;top: -20px;left: 380px;"></div>
           <div class="normal-wall show-border s-s" style="width: 90px;top: 120px;left: -40px;"></div>
           <div class="chuanghu show-border s-s" style="width: 418px;top: 120px;left: 50px;"></div>
           <div class="chuanghu show-border s-s" style="height: 68px;top: 50px;left: 451px;"></div>
           <div class="chuanghu show-border s-s" style="height: 68px;top: 50px;left: -19px;"></div>
-          <div class="chuanghu show-border s-s" style="width: 84px;top: -20px;left: 295px;">
+          <div class="chuanghu show-border s-s" style="width: 139px;top: -20px;left: 295px;">
             <div class="dianqi-name"> 窗台、拱顶、高105</div>
           </div>
           <!--  -->
@@ -306,7 +305,7 @@
           <div class="yangtaiguizi s-s">
           </div>
           <div class="xiyiji s-s">
-            <div class="dianqi-name">洗衣机 、 烘干机</div>
+            <div class="dianqi-name">洗衣机</div>
             <el-popover
               placement="bottom"
               title="装修参考"
@@ -741,17 +740,11 @@
           <div class="chuanghu2 s-s">
             <div class="dianqi-name">小窗户，圆弧半径≈40</div>
           </div>
-          <div v-show="!rotateDir" class="yangtaigui s-s">
-            <div class="dianqi-name">顶部柜子</div>
-          </div>
-          <div v-show="!rotateDir" class="hongganjiguizi s-s">
-            <div class="dianqi-name">烘干机柜子</div>
-          </div>
           <div v-show="!rotateDir" class="xiyijizhuomian s-s">
             <div class="dianqi-name">洗衣机+顶部台面</div>
           </div>
           <!-- 标线 -->
-          <div v-show="!rotateDir" class="mark-line h s-s" style="height: 103px;top: 164px;left: 386px;"></div>
+          <div v-show="!rotateDir" class="mark-line h s-s" style="height: 93px;top: 174px;left: 416px;"></div>
           <div v-show="!rotateDir" class="mark-line h s-s" style="height: 33px;top: 0px;left: 322px;"></div>
           <div v-show="!rotateDir" class="mark-line h s-s" style="height: 233px;top: 34px;left: 322px;"></div>
         </div>
