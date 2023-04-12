@@ -43,6 +43,19 @@
       <!-- 整个房子 -->
       <div class="home">
         <div class="w s-s" style="height: 840px;top:80px;"></div>
+        <!-- 暖气素材 -->
+        <el-popover
+          placement="bottom"
+          title="暖气相关"
+          width="300"
+          trigger="click">
+          <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+            <el-carousel-item v-for="item in 12" :key="item" style="height:300px">
+              <img :src="`./nuanqi/${item}.jpg`" alt="" style="height: 100%">
+            </el-carousel-item>
+          </el-carousel>
+          <i slot="reference" class="magic el-icon-magic-stick" style="top: 43px;left: 10px;"></i>
+        </el-popover>
         <!-- 墙柜素材 -->
         <el-popover
           placement="bottom"
@@ -99,20 +112,31 @@
           <div class="w s-s" style="height: 20px; left: 160px; top: 250px"></div>
           <div class="normal-wall show-border s-s" style="width: 158px; top: 260px;left:-10px;"></div>
           <div class="normal-wall show-border s-s" style="height: 88px; left: -10px;top:10px;"></div>
-          <div class="normal-wall show-border s-s" style="height: 13px; top: 245px; left: -10px;"></div>
+          <div class="normal-wall show-border s-s" style="width: 10px; height: 13px; top: 245px; left: -10px;"></div>
           <!-- 线 -->
           <div class="l s-s" style="width: 158px; left: 10px; top: 60px"></div>
           <div class="l s-s" style="width: 62px; left: 168px; top: 60px"></div>
           <div class="l s-s" style="height: 50px; left: 168px; top: 10px"></div>
-          <div class="l s-s" style="height: 140px; left: 168px; top: 60px"></div>
-          <div class="l s-s" style="width: 58px; left: 110px; top: 200px"></div>
-          <div class="l s-s" style="width: 100px; left: 10px; top: 200px"></div>
-          <div class="l s-s" style="width: 62px; left: 168px; top: 200px"></div>
-          <div class="l s-s" style="height: 40px; left: 168px; top: 200px"></div>
-          <div class="l s-s" style="height: 60px; left: 110px; top: 200px"></div>
+          <div class="l s-s" style="height: 32px; left: 168px; top: 60px"></div>
+          <div class="l s-s" style="height: 148px; left: 168px; top: 92px"></div>
+          <div class="l s-s" style="width: 68px; left: 100px; top: 220px"></div>
+          <div class="l s-s" style="width: 100px; left: 0px; top: 220px"></div>
+          <div class="l s-s" style="height: 40px; left: 100px; top: 220px"></div>
           <!-- 冰箱 -->
           <div class="freezer s-s">
             <div class="dianqi-name">冰箱</div>
+            <el-popover
+              placement="bottom"
+              title="装修参考"
+              width="300"
+              trigger="click">
+              <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+                <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+                  <img :src="`./bingxiang/${item}.jpg`" alt="" style="height: 100%">
+                </el-carousel-item>
+              </el-carousel>
+              <i slot="reference" class="magic el-icon-magic-stick" style="top: 0px;left: 37px;"></i>
+            </el-popover>
           </div>
           <!-- 排烟管道 -->
           <div class="paiyanguandao s-s">
@@ -139,7 +163,7 @@
                   <img :src="`./xiwanji/${item}.jpg`" alt="" style="height: 100%">
                 </el-carousel-item>
               </el-carousel>
-              <i slot="reference" class="magic el-icon-magic-stick" style="top: 20px;left: 10px;"></i>
+              <i slot="reference" class="magic el-icon-magic-stick" style="top: 10px;left: 10px;"></i>
             </el-popover>
           </div>
           <!-- 洗手池 -->
@@ -155,32 +179,26 @@
                   <img :src="`./xishouchi/${item}.jpg`" alt="" style="height: 100%">
                 </el-carousel-item>
               </el-carousel>
-              <i slot="reference" class="magic el-icon-magic-stick" style="top: 20px;left: 10px;"></i>
+              <i slot="reference" class="magic el-icon-magic-stick" style="top: 10px;left: 10px;"></i>
             </el-popover>
+          </div>
+          <div class="xiashuiguan s-s">
+            <div class="dianqi-name">下水管</div>
+          </div>
+          <div class="ranqilu s-s">
+            <div class="dianqi-name">燃气炉</div>
           </div>
           <!-- 储物架 -->
-          <div class="chuwujia s-s">
+          <!-- <div class="chuwujia s-s">
             <div class="dianqi-name">储物架</div>
-            <el-popover
-              placement="bottom"
-              title="装修参考"
-              width="300"
-              trigger="click">
-              <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-                <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
-                  <img :src="`./bingxiang/${item}.jpg`" alt="" style="height: 100%">
-                </el-carousel-item>
-              </el-carousel>
-              <i slot="reference" class="magic el-icon-magic-stick" style="top: 0px;left: 37px;"></i>
-            </el-popover>
-          </div>
+          </div> -->
           <!-- 门 -->
           <div
             class="doors"
             style="width: 16px;height: 160px;position:absolute;top: 100px;left: -8px;"
           >
             <div class="d s-s" style="height: 75px;"></div>
-            <div class="d s-s" style="height: 75px;left: 8px;top: 70px"></div>
+            <div class="d s-s" style="height: 75px;left: 2px;top: 70px"></div>
           </div>
           <!-- 厨房电器 -->
           <div class="dianqi-list s-s" v-show="showDianqiList">
@@ -196,10 +214,26 @@
           </div>
           <div class="dianqi-list dl-water s-s" v-show="showWaterList">
             厨房用水器件：
+            <div>燃气炉</div>
             <div>洗碗机</div>
             <div>净水器</div>
             <div>热水器</div>
+            <div>管线机</div>
             <div>洗菜槽的水龙头</div>
+
+            <!-- 水管开槽线路 -->
+            <p class="reshuiguan" style="
+              height: 95%;
+              right: 31px;
+              top: 2px;
+              transform: rotateZ(19deg);
+              transform-origin: top;
+            "></p>
+            <p class="reshuiguan" style="
+              width: 40px;
+              right: 93px;
+              top: 238px;
+            "></p>
           </div>
         </div>
         <!-- 走廊 -->
@@ -279,6 +313,22 @@
           <div class="dianqi-list dl-water s-s" v-show="showWaterList">
             大厅用水器件：
             <div>暖气片</div>
+            <!-- 水管开槽线路 -->
+            <p class="reshuiguan" style="
+              height: 677px;
+              right: 37px;
+              top: -13px;
+            "></p>
+            <p class="reshuiguan" style="
+              height: 254px;
+              right: 15px;
+              top: -13px;
+            "></p>
+            <p class="reshuiguan" style="
+              height: 33px;
+              right: 2px;
+              top: -13px;
+            "></p>
           </div>
           <div class="mark-line h s-s" style="height: 105px;top:240px;left: 332px"></div>
           <div class="mark-line h s-s" style="height: 70px;top:167px;left: 216px"></div>
@@ -333,6 +383,16 @@
             <div>洗衣机</div>
             <div>水槽的水龙头</div>
             <div>暖气片?</div>
+            <p class="reshuiguan" style="
+              width: 316px;
+              left: 4px;
+              top: -2px;
+            "></p>
+            <p class="reshuiguan" style="
+              height: 44px;
+              left: 314px;
+              top: -49px;
+            "></p>
           </div>
         </div>
         <!-- 书房 -->
@@ -403,6 +463,9 @@
           <div class="yigui s-s">
             <div class="dianqi-name">衣柜、一门到顶</div>
           </div>
+          <div class="nuanqipian s-s show-border">
+            <div class="dianqi-name">热</div>
+          </div>
           <div class="dianqi-list s-s" v-show="showDianqiList">
             主卧用电器件：
             <div>投影仪</div>
@@ -413,6 +476,16 @@
           <div class="dianqi-list dl-water s-s" v-show="showWaterList">
             主卧用水器件：
             <div>暖气片</div>
+            <p class="reshuiguan" style="
+              height: 287px;
+              left: 16px;
+              top: -47px;
+            "></p>
+            <p class="reshuiguan" style="
+              width: 18px;
+              left: 4px;
+              top: 242px;
+            "></p>
           </div>
           <div class="w-thin s-s show-border" style="height: 130px;left: 100px; top: -66px;"></div>
           <img src="../public/common/men.jpg" alt="" class="men">
@@ -423,6 +496,9 @@
           <div class="yigui s-s">
             <div class="dianqi-name">衣柜、一门到顶</div>
           </div>
+          <div class="nuanqipian s-s show-border">
+            <div class="dianqi-name">热</div>
+          </div>
           <div class="dianqi-list s-s" v-show="showDianqiList">
             次卧用电器件：
             <div>开关</div>
@@ -432,6 +508,21 @@
           <div class="dianqi-list dl-water s-s" v-show="showWaterList">
             次卧用水器件：
             <div>暖气片</div>
+            <p class="reshuiguan" style="
+              width: 16px;
+              left: 7px;
+              top: 201px;
+            "></p>
+            <p class="reshuiguan" style="
+              height: 15%;
+              left: 26px;
+              top: 201px;
+            "></p>
+            <p class="reshuiguan" style="
+              width: 327px;
+              left: -305px;
+              top: 243px;
+            "></p>
           </div>
           <img src="../public/common/men.jpg" alt="" class="men">
         </div>
@@ -449,9 +540,9 @@
           <!-- 薄墙 -->
           <div class="w-thin s-s show-border" style="height: 228px;left: 260px; top: 10px;"></div>
           <div class="w-thin s-s show-border" style="height: 228px;left: 140px; top: 10px;"></div>
-          <div class="w-thin s-s show-border" style="width: 128px;left: 10px; top: 109px;"></div>
-          <div class="w-thin s-s show-border" style="width: 55px;left: 10px; top: 240px;"></div>
-          <div class="w-thin s-s show-border" style="width: 128px;left: 140px; top: 240px;"></div>
+          <div class="w-thin s-s show-border" style="width: 128px;left: 10px; top: 129px;"></div>
+          <div class="w-thin s-s show-border" style="width: 50px;left: 10px; top: 240px;"></div>
+          <div class="w-thin s-s show-border" style="width: 140px;left: 140px; top: 240px;"></div>
 
           <img src="../public/common/men.jpg" alt="" class="men men1"/>
           <img src="../public/common/men.jpg" alt="" class="men men2"/>
