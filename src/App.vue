@@ -21,6 +21,11 @@
             v-model="showWaterList"
             active-color="blue">
           </el-switch><br/>
+          <span>显示水管</span>
+          <el-switch
+            v-model="showZihuangShui"
+            active-color="blue">
+          </el-switch><br/>
           <span>阳台洗衣机靠左</span>
           <el-switch
             v-model="xiyijiAlignleft"
@@ -55,6 +60,32 @@
             </el-carousel-item>
           </el-carousel>
           <i slot="reference" class="magic el-icon-magic-stick" style="top: 43px;left: 10px;"></i>
+        </el-popover>
+        <!-- 下水相关 -->
+        <el-popover
+          placement="bottom"
+          title="下水相关"
+          width="300"
+          trigger="click">
+          <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+            <el-carousel-item v-for="item in 2" :key="item" style="height:300px">
+              <img :src="`./xiashuiguan/${item}.jpg`" alt="" style="height: 100%">
+            </el-carousel-item>
+          </el-carousel>
+          <i slot="reference" class="magic el-icon-magic-stick" style="top: 43px;left: 40px;"></i>
+        </el-popover>
+        <!-- 伟星水管相关 -->
+        <el-popover
+          placement="bottom"
+          title="伟星水管"
+          width="300"
+          trigger="click">
+          <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+            <el-carousel-item v-for="item in 20" :key="item" style="height:300px">
+              <img :src="`./shui/${item}.jpg`" alt="" style="height: 100%">
+            </el-carousel-item>
+          </el-carousel>
+          <i slot="reference" class="magic el-icon-magic-stick" style="top: 43px;left: 70px;"></i>
         </el-popover>
         <!-- 墙柜素材 -->
         <el-popover
@@ -110,7 +141,7 @@
           <div class="w s-s" style="height: 55px; left: 100%;top: 205px;border-top: none;"></div>
           <div class="w s-s" style="width: 80px; left: 160px; top: 250px"></div>
           <div class="w s-s" style="height: 20px; left: 160px; top: 250px"></div>
-          <div class="normal-wall show-border s-s" style="width: 158px; top: 260px;left:-10px;"></div>
+          <div class="normal-wall show-border s-s" style="width: 158px; height: 10px; top: 260px;left:-10px;"></div>
           <div class="normal-wall show-border s-s" style="height: 88px; left: -10px;top:10px;"></div>
           <div class="normal-wall show-border s-s" style="width: 10px; height: 13px; top: 245px; left: -10px;"></div>
           <!-- 线 -->
@@ -234,6 +265,37 @@
               right: 93px;
               top: 238px;
             "></p>
+            <!-- 家用热水单管 -->
+            <p class="reshuidanguan" style="height: 17px;right: 115px;top: -3px;"></p>
+            <p class="reshuidanguan" style="width: 50px;right: 64px;top: 15px;"></p>
+            <p class="reshuidanguan" style="height: 136px;right: 61px;top: 16px;"></p>
+            <p class="reshuidanguan" style="width: 51px;right:10px;top: 152px;"></p>
+            <p class="reshuidanguan over" style="width: 15px;right:8px;top: 154px;"></p>
+            <p class="reshuidanguan over" style="height: 40px;right: 23px;top: 154px;"></p>
+            <p class="reshuidanguan over" style="width: 15px;right:8px;top: 194px;"></p>
+            <p class="reshuidanguan" style="width: 15px;right:10px;top: 192px;"></p>
+            <p class="reshuidanguan" style="height: 193px;right: 25px;top: -2px;"></p>
+            <p class="reshuidanguan" style="height: 10px;right: 25px;top: 193px;"></p>
+            <p class="reshuidanguan" style="width: 12px;right: 13px;top: 203px;"></p>
+            
+            <p class="reshuidanguan hot" style="height: 226px;right: 37px;top: -2px;"></p>
+          </div>
+          
+          <div class="dianqi-list dl-water s-s" v-show="showZihuangShui">
+            <!-- 家用热水单管 -->
+            <p class="reshuidanguan" style="height: 17px;right: 115px;top: -3px;"></p>
+            <p class="reshuidanguan" style="width: 50px;right: 64px;top: 15px;"></p>
+            <p class="reshuidanguan" style="height: 136px;right: 61px;top: 16px;"></p>
+            <p class="reshuidanguan" style="width: 51px;right:10px;top: 152px;"></p>
+            <p class="reshuidanguan over" style="width: 10px;right:8px;top: 154px;"></p>
+            <p class="reshuidanguan over" style="height: 40px;right: 18px;top: 154px;"></p>
+            <p class="reshuidanguan over" style="width: 10px;right:8px;top: 194px;"></p>
+            <p class="reshuidanguan" style="width: 10px;right:10px;top: 192px;"></p>
+            <p class="reshuidanguan" style="height: 193px;right: 20px;top: -2px;"></p>
+            <p class="reshuidanguan" style="height: 10px;right: 20px;top: 193px;"></p>
+            <p class="reshuidanguan" style="width: 9px;right: 11px;top: 203px;"></p>
+            
+            <p class="reshuidanguan hot" style="height: 226px;right: 29px;top: -2px;"></p>
           </div>
         </div>
         <!-- 走廊 -->
@@ -325,7 +387,7 @@
               top: -13px;
             "></p>
             <p class="reshuiguan" style="
-              height: 33px;
+              height: 23px;
               right: 2px;
               top: -13px;
             "></p>
@@ -867,6 +929,7 @@ export default {
     return {
       showDianqiList: false,
       showWaterList: false,
+      showZihuangShui: true,
       switchTable: false,
       xiyijiAlignleft: false, // 阳台洗衣机放哪边
       weishengjianType: 1,
