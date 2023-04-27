@@ -42,19 +42,19 @@ div {
     }
     .reshuidanguan {
       border: 2px solid rgba(0, 89, 255, 0.6);
+      background-color: rgba(0, 89, 255, 0.6);
       border-radius: 2px;
       width: 1px;
       height: 1px;
       position: absolute;
       top: 0;
       &.over {
+        width: 3px;
+        height: 3px;
         border-style: dotted;
       }
       &.hot {
-        border-color: rgb(255, 94, 0);
-        &.over {
-          border-color: rgba(255, 94, 0, 0.6);
-        }
+        background-color: rgb(255, 94, 0);
       }
     }
   }

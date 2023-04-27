@@ -1,5 +1,5 @@
 <template>
-  <div id="app" style="padding: 20px 50px; width: 930px;">
+  <div id="app" style="padding: 20px 50px; width: 930px;filter: grayscale(0.5);opacity: 0.4;">
     <div>
       <!-- 房屋设计 -->
       <div>
@@ -81,11 +81,24 @@
           width="300"
           trigger="click">
           <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-            <el-carousel-item v-for="item in 20" :key="item" style="height:300px">
+            <el-carousel-item v-for="item in 21" :key="item" style="height:300px">
               <img :src="`./shui/${item}.jpg`" alt="" style="height: 100%">
             </el-carousel-item>
           </el-carousel>
           <i slot="reference" class="magic el-icon-magic-stick" style="top: 43px;left: 70px;"></i>
+        </el-popover>
+        <!-- 全屋家装俯视图 -->
+        <el-popover
+          placement="bottom"
+          title="伟星水管"
+          width="300"
+          trigger="click">
+          <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
+            <el-carousel-item v-for="item in 9" :key="item" style="height:300px">
+              <img :src="`./fushitu/${item}.png`" alt="" style="height: 100%">
+            </el-carousel-item>
+          </el-carousel>
+          <i slot="reference" class="magic el-icon-magic-stick" style="top: 43px;left: 100px;"></i>
         </el-popover>
         <!-- 墙柜素材 -->
         <el-popover
@@ -265,20 +278,6 @@
               right: 93px;
               top: 238px;
             "></p>
-            <!-- 家用热水单管 -->
-            <p class="reshuidanguan" style="height: 17px;right: 115px;top: -3px;"></p>
-            <p class="reshuidanguan" style="width: 50px;right: 64px;top: 15px;"></p>
-            <p class="reshuidanguan" style="height: 136px;right: 61px;top: 16px;"></p>
-            <p class="reshuidanguan" style="width: 51px;right:10px;top: 152px;"></p>
-            <p class="reshuidanguan over" style="width: 15px;right:8px;top: 154px;"></p>
-            <p class="reshuidanguan over" style="height: 40px;right: 23px;top: 154px;"></p>
-            <p class="reshuidanguan over" style="width: 15px;right:8px;top: 194px;"></p>
-            <p class="reshuidanguan" style="width: 15px;right:10px;top: 192px;"></p>
-            <p class="reshuidanguan" style="height: 193px;right: 25px;top: -2px;"></p>
-            <p class="reshuidanguan" style="height: 10px;right: 25px;top: 193px;"></p>
-            <p class="reshuidanguan" style="width: 12px;right: 13px;top: 203px;"></p>
-            
-            <p class="reshuidanguan hot" style="height: 226px;right: 37px;top: -2px;"></p>
           </div>
           
           <div class="dianqi-list dl-water s-s" v-show="showZihuangShui">
@@ -296,6 +295,7 @@
             <p class="reshuidanguan" style="width: 9px;right: 11px;top: 203px;"></p>
             
             <p class="reshuidanguan hot" style="height: 226px;right: 29px;top: -2px;"></p>
+            <p class="reshuidanguan hot" style="width: 19px;right: 9px;top: 172px;"></p>
           </div>
         </div>
         <!-- 走廊 -->
@@ -456,6 +456,12 @@
               top: -49px;
             "></p>
           </div>
+          <div class="dianqi-list dl-water s-s" v-show="showZihuangShui">
+            <!-- 家用热水单管 -->
+            <p class="reshuidanguan" style="width: 148px;right: -3px;top: 80px;"></p>
+            
+            <p class="reshuidanguan hot" style="width: 143px;right: -3px;top: 59px;"></p>
+          </div>
         </div>
         <!-- 书房 -->
         <div class="shufang">
@@ -518,6 +524,13 @@
           <div v-show="switchTable" class="mark-line v s-s" style="width: 70px;top:137px;left: 133px"></div>
           <div v-show="switchTable" class="mark-line v s-s" style="width: 70px;top:137px;left: -33px"></div>
           <div v-show="switchTable" class="mark-line h s-s" style="height: 60px; top:237px;left: 124px"></div>
+          
+          <div class="dianqi-list dl-water s-s" v-show="showZihuangShui">
+            <!-- 家用热水单管 -->
+            <p class="reshuidanguan" style="height: 590px;left: 9px;top: -189px;"></p>
+            
+            <p class="reshuidanguan hot" style="height: 550px;left: 15px;top: -171px;"></p>
+          </div>
         </div>
         <!-- 主卧 -->
         <div class="zhuwo">
@@ -674,6 +687,23 @@
             </el-carousel>
             <i slot="reference" class="magic el-icon-magic-stick" style="top: 109px;left: 190px;"></i>
           </el-popover>
+          <div class="dianqi-list dl-water s-s" v-show="showZihuangShui">
+            <!-- 家用热水单管 -->
+            <p class="reshuidanguan over" style="height: 112px;left: 65px;top: -44px;"></p>
+            <p class="reshuidanguan over" style="height: 100px;left: 19px;top: 67px;"></p>
+            <p class="reshuidanguan over" style="width: 46px;left: 19px;top: 67px;"></p>
+            <p class="reshuidanguan over" style="width: 192px;left: 65px;top: 48px;"></p>
+            <p class="reshuidanguan over" style="width: 8px;left: 10px;top: 167px;"></p>
+            <p class="reshuidanguan" style="height: 176px;right: 10px;top: 48px;"></p>
+            <p class="reshuidanguan" style="width: 12px;right: 10px;top: 225px;"></p>
+            <p class="reshuidanguan" style="height: 69px;left: 10px;top: 99px;"></p>
+
+            <p class="reshuidanguan over hot" style="height: 70px;left: 46px;top: -22px;"></p>
+            <p class="reshuidanguan over hot" style="height: 136px;left: 34px;top: 47px;"></p>
+            <p class="reshuidanguan over hot" style="width: 12px;left: 34px;top: 47px;"></p>
+            <p class="reshuidanguan over hot" style="width: 212px;left: 46px;top: 30px;"></p>
+            <p class="reshuidanguan over hot" style="width: 22px;left: 10px;top: 183px;"></p>
+          </div>
         </div>
         <!-- 洗手间 2 -->
         <div v-show="weishengjianType === 2" class="washroom2">
