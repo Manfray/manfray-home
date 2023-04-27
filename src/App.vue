@@ -1,5 +1,5 @@
 <template>
-  <div id="app" style="padding: 20px 50px; width: 930px;filter: grayscale(0.5);opacity: 0.4;">
+  <div id="app" style="padding: 20px 50px; width: 930px;">
     <div>
       <!-- 房屋设计 -->
       <div>
@@ -90,7 +90,7 @@
         <!-- 全屋家装俯视图 -->
         <el-popover
           placement="bottom"
-          title="伟星水管"
+          title="装修设计俯视图"
           width="300"
           trigger="click">
           <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
