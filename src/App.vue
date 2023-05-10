@@ -323,6 +323,33 @@
             <div>灯</div>
           </div>
           <img src="../public/common/men.jpg" alt="" class="men">
+          <div v-show="showDianqiList">
+            <!-- 所有电线都画这里 -->
+            <!-- 拐1 -->
+            <div class="dianxian" style="width: 188px;top: 124px;"></div><!-- 8 -->
+            <div class="dianxian" style="width: 63px;top: 127px;"></div><!-- 7 -->
+            <div class="dianxian" style="width: 60px;top: 130px;"></div><!-- 6 -->
+            <div class="dianxian" style="width: 57px;top: 133px;"></div><!-- 5 -->
+            <div class="dianxian" style="width: 54px;top: 136px;"></div><!-- 4 -->
+            <div class="dianxian" style="width: 51px;top: 139px;"></div><!-- 3 -->
+            <div class="dianxian" style="width: 48px;top: 142px;"></div><!-- 2 -->
+            <div class="dianxian" style="width: 45px;top: 145px;"></div><!-- 1 -->
+            <!-- 拐2 -->
+            <div class="dianxian" style="height: 328px; left: 63px;top: 127px;"></div><!-- 7 -->
+            <div class="dianxian" style="height: 328px; left: 60px;top: 130px;"></div><!-- 6 -->
+            <div class="dianxian" style="height: 328px; left: 57px;top: 133px;"></div><!-- 5 -->
+            <div class="dianxian" style="height: 328px; left: 54px;top: 136px;"></div><!-- 4 -->
+            <div class="dianxian" style="height: 328px; left: 51px;top: 139px;"></div><!-- 3 -->
+            <div class="dianxian" style="height: 328px; left: 48px;top: 142px;"></div><!-- 2 -->
+            <div class="dianxian" style="height: 628px; left: 45px;top: 145px;"></div><!-- 1 -->
+            <!-- 拐3 -->
+            <div class="dianxian" style="width: 328px; left: 63px;top: 455px;"></div><!-- 7 -->
+            <div class="dianxian" style="width: 570px; left: 60px;top: 458px;"></div><!-- 6 -->
+            <div class="dianxian" style="width: 576px; left: 57px;top: 461px;"></div><!-- 5 -->
+            <div class="dianxian" style="width: 579px; left: 54px;top: 464px;"></div><!-- 4 -->
+            <div class="dianxian" style="width: 579px; left: 51px;top: 467px;"></div><!-- 3 -->
+            <div class="dianxian" style="width: 328px; left: 48px;top: 470px;"></div><!-- 2 -->
+          </div>
         </div>
         <!-- 大厅 -->
         <div class="dating">
@@ -957,9 +984,9 @@ export default {
   components: {},
   data() {
     return {
-      showDianqiList: false,
+      showDianqiList: true,
       showWaterList: false,
-      showZihuangShui: true,
+      showZihuangShui: false,
       switchTable: false,
       xiyijiAlignleft: false, // 阳台洗衣机放哪边
       weishengjianType: 1,
