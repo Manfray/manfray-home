@@ -326,7 +326,8 @@
           <div v-show="showDianqiList">
             <!-- 所有电线都画这里 -->
             <!-- 拐1 -->
-            <div class="dianxian" style="width: 188px;top: 124px;"></div><!-- 8 -->
+            <div class="dianxian" style="width: 188px;top: 121px;"></div><!-- 9 -->
+            <div class="dianxian" style="width: 66px;top: 124px;"></div><!-- 8 -->
             <div class="dianxian" style="width: 63px;top: 127px;"></div><!-- 7 -->
             <div class="dianxian" style="width: 60px;top: 130px;"></div><!-- 6 -->
             <div class="dianxian" style="width: 57px;top: 133px;"></div><!-- 5 -->
@@ -335,20 +336,62 @@
             <div class="dianxian" style="width: 48px;top: 142px;"></div><!-- 2 -->
             <div class="dianxian" style="width: 45px;top: 145px;"></div><!-- 1 -->
             <!-- 拐2 -->
+            <div class="dianxian" style="height: 328px; left: 66px;top: 124px;"></div><!-- 8 -->
             <div class="dianxian" style="height: 328px; left: 63px;top: 127px;"></div><!-- 7 -->
             <div class="dianxian" style="height: 328px; left: 60px;top: 130px;"></div><!-- 6 -->
             <div class="dianxian" style="height: 328px; left: 57px;top: 133px;"></div><!-- 5 -->
             <div class="dianxian" style="height: 328px; left: 54px;top: 136px;"></div><!-- 4 -->
             <div class="dianxian" style="height: 328px; left: 51px;top: 139px;"></div><!-- 3 -->
-            <div class="dianxian" style="height: 328px; left: 48px;top: 142px;"></div><!-- 2 -->
-            <div class="dianxian" style="height: 628px; left: 45px;top: 145px;"></div><!-- 1 -->
+            <div class="dianxian" style="height: 676px; left: 48px;top: 142px;"></div><!-- 2 -->
+            <div class="dianxian" style="width: 23px; left: 48px;top: 818px;"></div><!-- 2 分支 -->
+            <div class="dianxian" style="height: 45px; left: 71px;top: 818px;"></div><!-- 2 分支 -->
+            <div class="dianxian" style="width: 226px; left: 71px;top: 863px;"></div><!-- 2 分支 -->
+            <div class="dianxian" style="height: 53px; left: 297px;top: 810px;"></div><!-- 2 分支 -->
+            <div class="dianxian" style="width: 27px; left: 297px;top: 810px;"></div><!-- 2 分支 -->
+            <div class="dianxian" style="width: 27px; left: 297px;top: 810px;"></div><!-- 2 分支 -->
+            <div class="dianxian" style="height: 10px; left: 324px;top: 810px;"></div><!-- 2 分支 -->
+            <div class="dianxian" style="height: 10px; left: 327px;top: 810px;"></div><!-- 2 分支 -->
+            <div class="dianxian" style="width: 160px; left: 327px;top: 810px;"></div><!-- 2 分支 -->
+            <div class="dianxian" style="height: 10px; left: 487px;top: 810px;"></div><!-- 2 分支 -->
+            <div class="dianxian" style="height: 10px; left: 490px;top: 810px;"></div><!-- 2 分支 -->
+            <div class="dianxian" style="height: 80px; left: 490px;top: 740px;"></div><!-- 2 分支 -->
+            <div class="dianxian" style="width: 108px; left: 490px;top: 740px;"></div><!-- 2 分支 -->
+            <div class="dianxian" style="height: 494px; left: 45px;top: 145px;"></div><!-- 1 -->
+            <div class="dianxian" style="width: 45px; left: 0px;top: 639px;"></div><!-- 1 分支 -->
+            <div class="dianxian" style="width: 45px; left: 0px;top: 642px;"></div><!-- 1 分支 -->
+            <div class="dianxian" style="height: 177px; left: 45px;top: 642px;"></div><!-- 1 分支 -->
             <!-- 拐3 -->
-            <div class="dianxian" style="width: 328px; left: 63px;top: 455px;"></div><!-- 7 -->
-            <div class="dianxian" style="width: 570px; left: 60px;top: 458px;"></div><!-- 6 -->
-            <div class="dianxian" style="width: 576px; left: 57px;top: 461px;"></div><!-- 5 -->
-            <div class="dianxian" style="width: 579px; left: 54px;top: 464px;"></div><!-- 4 -->
-            <div class="dianxian" style="width: 579px; left: 51px;top: 467px;"></div><!-- 3 -->
-            <div class="dianxian" style="width: 328px; left: 48px;top: 470px;"></div><!-- 2 -->
+            <div class="dianxian" style="width: 336px; left: 66px;top: 452px;"></div><!-- 8 -->
+            <div class="dianxian" style="width: 587px; left: 63px;top: 455px;"></div><!-- 7 -->
+            <div class="dianxian" style="width: 593px; left: 60px;top: 458px;"></div><!-- 6 -->
+            <div class="dianxian" style="width: 596px; left: 57px;top: 461px;"></div><!-- 5 -->
+            <div class="dianxian" style="width: 596px; left: 54px;top: 464px;"></div><!-- 4 -->
+            <div class="dianxian" style="width: 486px; left: 51px;top: 467px;"></div><!-- 3 -->
+            <div class="dianxian" style="height: 155px; left: 402px;top: 298px;"></div><!-- 8 分支 -->
+            <div class="dianxian" style="height: 10px; left: 405px;top: 298px;"></div><!-- 8 分支 -->
+            <div class="dianxian" style="width: 194px; left: 405px;top: 308px;"></div><!-- 8 分支 -->
+            <div class="dianxian" style="width: 34px; left: 372px;top: 298px;"></div><!-- 8 分支 -->
+            <div class="dianxian" style="height: 12px; left: 372px;top: 287px;"></div><!-- 8 分支 -->
+            <div class="dianxian" style="width: 22px; left: 350px;top: 286px;"></div><!-- 8 分支 -->
+            <div class="dianxian" style="height: 24px; left: 350px;top: 262px;"></div><!-- 8 分支 -->
+            <div class="dianxian" style="height: 330px; left: 537px;top: 467px;"></div><!-- 3 分支 -->
+            <div class="dianxian" style="width: 62px; left: 537px;top: 797px;"></div><!-- 3 分支 -->
+            <div class="dianxian" style="height: 356px; left: 650px;top: 464px;"></div><!-- 4 分支 -->
+            <div class="dianxian" style="height: 359px; left: 653px;top: 461px;"></div><!-- 5 分支 -->
+            <div class="dianxian" style="width: 33px; left: 653px;top: 820px;"></div><!-- 5 分支 -->
+            <div class="dianxian" style="height: 28px; left: 686px;top: 820px;"></div><!-- 5 分支 -->
+            <div class="dianxian" style="width: 200px; left: 686px;top: 848px;"></div><!-- 5 分支 -->
+            <div class="dianxian" style="height: 260px; left: 886px;top: 588px;"></div><!-- 5 分支 -->
+            <div class="dianxian" style="width: 184px; left: 726px;top: 588px;"></div><!-- 5 分支 -->
+            <div class="dianxian" style="height: 60px; left: 726px;top: 528px;"></div><!-- 5 分支 -->
+            <div class="dianxian" style="width: 24px; left: 886px;top: 788px;"></div><!-- 5 分支 -->
+            <div class="dianxian" style="height: 256px; left: 650px;top: 200px;"></div><!-- 7 分支 -->
+            <div class="dianxian" style="width: 270px; left: 610px;top: 200px;"></div><!-- 7 分支 -->
+            <div class="dianxian" style="height: 170px; left: 880px;top: 200px;"></div><!-- 7 分支 -->
+            <div class="dianxian" style="width: 30px; left: 880px;top: 370px;"></div><!-- 7 分支 -->
+            <div class="dianxian" style="width: 185px; left: 725px;top: 373px;"></div><!-- 7 分支 -->
+            <div class="dianxian" style="height: 30px; left: 725px;top: 373px;"></div><!-- 7 分支 -->
+            <div class="dianxian" style="height: 289px; left: 653px;top: 170px;"></div><!-- 6 分支 -->
           </div>
         </div>
         <!-- 大厅 -->
