@@ -52,10 +52,10 @@
         <el-popover
           placement="bottom"
           title="暖气相关"
-          width="300"
+          width="600"
           trigger="click">
-          <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-            <el-carousel-item v-for="item in 12" :key="item" style="height:300px">
+          <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+            <el-carousel-item v-for="item in 12" :key="item" style="height:600px">
               <img :src="`./nuanqi/${item}.jpg`" alt="" style="height: 100%">
             </el-carousel-item>
           </el-carousel>
@@ -65,10 +65,10 @@
         <el-popover
           placement="bottom"
           title="下水相关"
-          width="300"
+          width="600"
           trigger="click">
-          <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-            <el-carousel-item v-for="item in 2" :key="item" style="height:300px">
+          <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+            <el-carousel-item v-for="item in 3" :key="item" style="height:600px">
               <img :src="`./xiashuiguan/${item}.jpg`" alt="" style="height: 100%">
             </el-carousel-item>
           </el-carousel>
@@ -78,36 +78,49 @@
         <el-popover
           placement="bottom"
           title="伟星水管"
-          width="300"
+          width="600"
           trigger="click">
-          <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-            <el-carousel-item v-for="item in 21" :key="item" style="height:300px">
+          <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+            <el-carousel-item v-for="item in 21" :key="item" style="height:600px">
               <img :src="`./shui/${item}.jpg`" alt="" style="height: 100%">
             </el-carousel-item>
           </el-carousel>
           <i slot="reference" class="magic el-icon-magic-stick" style="top: 43px;left: 70px;"></i>
         </el-popover>
+        <!-- 飞鹤（武汉二厂）电线相关 -->
+        <el-popover
+          placement="bottom"
+          title="二厂电线"
+          width="600"
+          trigger="click">
+          <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+            <el-carousel-item v-for="item in 17" :key="item" style="height:600px">
+              <img :src="`./dianxianlu/${item - 1}.png`" alt="" style="height: 100%">
+            </el-carousel-item>
+          </el-carousel>
+          <i slot="reference" class="magic el-icon-magic-stick" style="top: 43px;left: 100px;"></i>
+        </el-popover>
         <!-- 全屋家装俯视图 -->
         <el-popover
           placement="bottom"
           title="装修设计俯视图"
-          width="300"
+          width="600"
           trigger="click">
-          <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-            <el-carousel-item v-for="item in 9" :key="item" style="height:300px">
+          <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+            <el-carousel-item v-for="item in 9" :key="item" style="height:600px">
               <img :src="`./fushitu/${item}.png`" alt="" style="height: 100%">
             </el-carousel-item>
           </el-carousel>
-          <i slot="reference" class="magic el-icon-magic-stick" style="top: 43px;left: 100px;"></i>
+          <i slot="reference" class="magic el-icon-magic-stick" style="top: 43px;left: 130px;"></i>
         </el-popover>
         <!-- 墙柜素材 -->
         <el-popover
           placement="bottom"
           title="装修参考"
-          width="300"
+          width="600"
           trigger="click">
-          <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-            <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+          <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+            <el-carousel-item v-for="item in 10" :key="item" style="height:600px">
               <img :src="`./qianggui/${item}.jpg`" alt="" style="height: 100%">
             </el-carousel-item>
           </el-carousel>
@@ -117,10 +130,10 @@
         <el-popover
           placement="bottom"
           title="装修参考"
-          width="300"
+          width="600"
           trigger="click">
-          <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-            <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+          <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+            <el-carousel-item v-for="item in 10" :key="item" style="height:600px">
               <img :src="`./yangtai/${item}.jpg`" alt="" style="height: 100%">
             </el-carousel-item>
           </el-carousel>
@@ -172,10 +185,10 @@
             <el-popover
               placement="bottom"
               title="装修参考"
-              width="300"
+              width="600"
               trigger="click">
-              <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-                <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+              <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+                <el-carousel-item v-for="item in 10" :key="item" style="height:600px">
                   <img :src="`./bingxiang/${item}.jpg`" alt="" style="height: 100%">
                 </el-carousel-item>
               </el-carousel>
@@ -200,10 +213,10 @@
             <el-popover
               placement="bottom"
               title="装修参考"
-              width="300"
+              width="600"
               trigger="click">
-              <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-                <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+              <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+                <el-carousel-item v-for="item in 10" :key="item" style="height:600px">
                   <img :src="`./xiwanji/${item}.jpg`" alt="" style="height: 100%">
                 </el-carousel-item>
               </el-carousel>
@@ -216,10 +229,10 @@
             <el-popover
               placement="bottom"
               title="装修参考"
-              width="300"
+              width="600"
               trigger="click">
-              <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-                <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+              <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+                <el-carousel-item v-for="item in 10" :key="item" style="height:600px">
                   <img :src="`./xishouchi/${item}.jpg`" alt="" style="height: 100%">
                 </el-carousel-item>
               </el-carousel>
@@ -306,10 +319,10 @@
           <el-popover
             placement="bottom"
             title="装修参考"
-            width="300"
+            width="600"
             trigger="click">
-            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-              <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+            <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 10" :key="item" style="height:600px">
                 <img :src="`./xuanguan/${item}.jpg`" alt="" style="height: 100%">
               </el-carousel-item>
             </el-carousel>
@@ -326,7 +339,12 @@
           <div v-show="showDianqiList">
             <!-- 所有电线都画这里 -->
             <!-- 拐1 -->
-            <div class="dianxian" style="width: 188px;top: 121px;"></div><!-- 9 -->
+            <div class="dianxian" style="width: 246px;top: 121px;"></div><!-- 9 -->
+            <div class="dianxian" style="height: 50px;top: 121px; left: 246px;"></div><!-- 9 分支 -->
+            <div class="dianxian" style="height: 100px;top: 71px; left: 249px;"></div><!-- 9 分支 -->
+            <div class="dianxian" style="width: 160px;top: 71px; left: 249px;"></div><!-- 9 分支 -->
+            <div class="dianxian" style="width: 160px;top: 71px; left: 249px;"></div><!-- 9 分支 -->
+            <div class="dianxian" style="height: 120px;top: -50px; left: 408px;"></div><!-- 9 分支 -->
             <div class="dianxian" style="width: 66px;top: 124px;"></div><!-- 8 -->
             <div class="dianxian" style="width: 63px;top: 127px;"></div><!-- 7 -->
             <div class="dianxian" style="width: 60px;top: 130px;"></div><!-- 6 -->
@@ -391,7 +409,7 @@
             <div class="dianxian" style="width: 30px; left: 880px;top: 370px;"></div><!-- 7 分支 -->
             <div class="dianxian" style="width: 185px; left: 725px;top: 373px;"></div><!-- 7 分支 -->
             <div class="dianxian" style="height: 30px; left: 725px;top: 373px;"></div><!-- 7 分支 -->
-            <div class="dianxian" style="height: 289px; left: 653px;top: 170px;"></div><!-- 6 分支 -->
+            <div class="dianxian" style="height: 259px; left: 653px;top: 200px;"></div><!-- 6 分支 -->
           </div>
         </div>
         <!-- 大厅 -->
@@ -424,10 +442,10 @@
             <el-popover
               placement="bottom"
               title="装修参考"
-              width="300"
+              width="600"
               trigger="click">
-              <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-                <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+              <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+                <el-carousel-item v-for="item in 10" :key="item" style="height:600px">
                   <img :src="`./kongtiao/${item}.jpg`" alt="" style="height: 100%">
                 </el-carousel-item>
               </el-carousel>
@@ -491,10 +509,10 @@
             <el-popover
               placement="bottom"
               title="装修参考"
-              width="300"
+              width="600"
               trigger="click">
-              <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-                <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+              <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+                <el-carousel-item v-for="item in 10" :key="item" style="height:600px">
                   <img :src="`./xiyiji/${item}.jpg`" alt="" style="height: 100%">
                 </el-carousel-item>
               </el-carousel>
@@ -568,10 +586,10 @@
           <el-popover
             placement="bottom"
             title="装修参考"
-            width="300"
+            width="600"
             trigger="click">
-            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-              <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+            <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 10" :key="item" style="height:600px">
                 <img :src="`./shujia/${item}.jpg`" alt="" style="height: 100%">
               </el-carousel-item>
             </el-carousel>
@@ -722,10 +740,10 @@
           <el-popover
             placement="bottom"
             title="装修参考"
-            width="300"
+            width="600"
             trigger="click">
-            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-              <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+            <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 10" :key="item" style="height:600px">
                 <img :src="`./xishoujian/${item}.jpg`" alt="" style="height: 100%">
               </el-carousel-item>
             </el-carousel>
@@ -735,10 +753,10 @@
           <el-popover
             placement="bottom"
             title="装修参考"
-            width="300"
+            width="600"
             trigger="click">
-            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-              <el-carousel-item v-for="item in 2" :key="item" style="height:300px">
+            <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 2" :key="item" style="height:600px">
                 <img :src="`./matong/${item}.jpg`" alt="" style="height: 100%">
               </el-carousel-item>
             </el-carousel>
@@ -748,10 +766,10 @@
           <el-popover
             placement="bottom"
             title="装修参考"
-            width="300"
+            width="600"
             trigger="click">
-            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-              <el-carousel-item v-for="item in 4" :key="item" style="height:300px">
+            <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 4" :key="item" style="height:600px">
                 <img :src="`./xizaojian/${item}.jpg`" alt="" style="height: 100%">
               </el-carousel-item>
             </el-carousel>
@@ -830,10 +848,10 @@
           <el-popover
             placement="bottom"
             title="装修参考"
-            width="300"
+            width="600"
             trigger="click">
-            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-              <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+            <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 10" :key="item" style="height:600px">
                 <img :src="`./xishoujian/${item}.jpg`" alt="" style="height: 100%">
               </el-carousel-item>
             </el-carousel>
@@ -843,10 +861,10 @@
           <el-popover
             placement="bottom"
             title="装修参考"
-            width="300"
+            width="600"
             trigger="click">
-            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-              <el-carousel-item v-for="item in 2" :key="item" style="height:300px">
+            <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 2" :key="item" style="height:600px">
                 <img :src="`./matong/${item}.jpg`" alt="" style="height: 100%">
               </el-carousel-item>
             </el-carousel>
@@ -856,10 +874,10 @@
           <el-popover
             placement="bottom"
             title="装修参考"
-            width="300"
+            width="600"
             trigger="click">
-            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-              <el-carousel-item v-for="item in 4" :key="item" style="height:300px">
+            <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 4" :key="item" style="height:600px">
                 <img :src="`./xizaojian/${item}.jpg`" alt="" style="height: 100%">
               </el-carousel-item>
             </el-carousel>
@@ -923,10 +941,10 @@
           <el-popover
             placement="bottom"
             title="装修参考"
-            width="300"
+            width="600"
             trigger="click">
-            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-              <el-carousel-item v-for="item in 10" :key="item" style="height:300px">
+            <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 10" :key="item" style="height:600px">
                 <img :src="`./xishoujian/${item}.jpg`" alt="" style="height: 100%">
               </el-carousel-item>
             </el-carousel>
@@ -936,10 +954,10 @@
           <el-popover
             placement="bottom"
             title="装修参考"
-            width="300"
+            width="600"
             trigger="click">
-            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-              <el-carousel-item v-for="item in 2" :key="item" style="height:300px">
+            <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 2" :key="item" style="height:600px">
                 <img :src="`./matong/${item}.jpg`" alt="" style="height: 100%">
               </el-carousel-item>
             </el-carousel>
@@ -949,10 +967,10 @@
           <el-popover
             placement="bottom"
             title="装修参考"
-            width="300"
+            width="600"
             trigger="click">
-            <el-carousel height="300px" :autoplay="false" arrow="always" indicator-position="none">
-              <el-carousel-item v-for="item in 4" :key="item" style="height:300px">
+            <el-carousel height="600px" :autoplay="false" arrow="always" indicator-position="none">
+              <el-carousel-item v-for="item in 4" :key="item" style="height:600px">
                 <img :src="`./xizaojian/${item}.jpg`" alt="" style="height: 100%">
               </el-carousel-item>
             </el-carousel>
@@ -1027,7 +1045,7 @@ export default {
   components: {},
   data() {
     return {
-      showDianqiList: true,
+      showDianqiList: false,
       showWaterList: false,
       showZihuangShui: false,
       switchTable: false,
