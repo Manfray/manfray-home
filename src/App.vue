@@ -145,7 +145,10 @@
         <div class="normal-wall show-border s-s" style="height: 48px;top:930px;left: 520px;"></div>
         <div class="w s-s" style="width: 105px;top:80px;top:920px;left: 515px;"></div>
         <div class="w s-s" style="width: 65px;top:80px;top:920px;left: 620px;"></div>
-        <div class="normal-wall show-border s-s" style="width: 63px;top:910px;left: 875px;"></div>
+        <div class="normal-wall show-border s-s" style="height: 83px;top:910px;left: 919px;"></div>
+        <div class="normal-wall show-border s-s" style="width: 176px;height:12px;top:980px;left: 695px;"></div>
+        <div class="normal-wall show-border s-s" style="width: 46px;top:974px;left: 871px;"></div>
+        <div class="normal-wall show-border s-s" style="height: 63px;top:930px;left: 676px;"></div>
         <div class="normal-wall show-border s-s" style="height: 468px;top:440px;left: 920px;"></div>
         <div class="w s-s" style="height: 190px;top:250px;left: 930px;border-bottom: none;"></div>
         <div class="w s-s" style="width: 70px;top:250px;left: 870px;border-left: none;"></div>
@@ -629,6 +632,12 @@
           <div class="nuanqipian s-s show-border">
             <div class="dianqi-name">热</div>
           </div>
+          <div class="chuanglian s-s show-border">
+            <div class="dianqi-name">窗帘</div>
+          </div>
+          <div class="chuang s-s">
+            <div class="dianqi-name">床</div>
+          </div>
           <div class="dianqi-list s-s" v-show="showDianqiList">
             主卧用电器件：
             <div>投影仪</div>
@@ -652,6 +661,8 @@
           </div>
           <div class="w-thin s-s show-border" style="height: 130px;left: 100px; top: -66px;"></div>
           <img src="../public/common/men.jpg" alt="" class="men">
+          <div class="mark-line h s-s" style="height: 58px;top:295px;left: 311px"></div>
+          <div class="mark-line h s-s" style="height: 58px;top:357px;left: 311px"></div>
         </div>
         <!-- 次卧 -->
         <div class="ciwo">
